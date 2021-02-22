@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
 import code.name.monkey.appthemehelper.ThemeStore;
 import code.name.monkey.appthemehelper.util.TintHelper;
-import code.name.monkey.retromusic.App;
+import dev.icarapovic.music.App;
 import code.name.monkey.retromusic.R;
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.BitmapTypeRequest;

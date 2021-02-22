@@ -22,7 +22,7 @@ import android.provider.BaseColumns;
 import android.provider.MediaStore.Audio.AudioColumns;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import code.name.monkey.retromusic.App;
+import dev.icarapovic.music.App;
 import code.name.monkey.retromusic.model.Song;
 import code.name.monkey.retromusic.repository.RealSongRepository;
 import java.util.List;

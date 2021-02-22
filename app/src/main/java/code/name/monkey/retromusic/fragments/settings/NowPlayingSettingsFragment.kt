@@ -21,6 +21,7 @@ import androidx.preference.Preference
 import androidx.preference.TwoStatePreference
 import code.name.monkey.retromusic.*
 import code.name.monkey.retromusic.util.PreferenceUtil
+import dev.icarapovic.music.App
 
 /**
  * @author Hemanth S (h4h13).

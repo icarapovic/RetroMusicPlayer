@@ -23,7 +23,7 @@ import androidx.core.graphics.BlendModeCompat.SRC_IN
 import androidx.core.text.HtmlCompat
 import androidx.fragment.app.DialogFragment
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.dialogs.BlacklistFolderChooserDialog
 import code.name.monkey.retromusic.extensions.colorButtons

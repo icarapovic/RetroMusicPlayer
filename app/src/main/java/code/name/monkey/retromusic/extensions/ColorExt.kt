@@ -35,13 +35,12 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.progressindicator.CircularProgressIndicator
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 fun Int.ripAlpha(): Int {

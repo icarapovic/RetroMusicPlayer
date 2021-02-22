@@ -20,7 +20,7 @@
 
 
     <application
-        android:name=".App"
+        android:name="dev.icarapovic.music.App"
         android:allowBackup="true"
         android:configChanges="locale|layoutDirection"
         android:icon="@mipmap/ic_launcher"

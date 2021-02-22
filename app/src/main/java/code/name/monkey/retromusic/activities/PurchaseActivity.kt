@@ -24,7 +24,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.MaterialUtil
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.BuildConfig
 import code.name.monkey.retromusic.Constants.PRO_VERSION_PRODUCT_ID
 import code.name.monkey.retromusic.R

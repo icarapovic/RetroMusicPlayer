@@ -41,7 +41,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 import code.name.monkey.appthemehelper.util.TintHelper;
-import code.name.monkey.retromusic.App;
+import dev.icarapovic.music.App;
 import java.text.DecimalFormat;
 
 public class RetroUtil {

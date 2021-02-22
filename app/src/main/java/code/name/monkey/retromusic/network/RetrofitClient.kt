@@ -1,7 +1,7 @@
 package code.name.monkey.retromusic.network
 
 import android.content.Context
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.BuildConfig
 import code.name.monkey.retromusic.network.conversion.LyricsConverterFactory
 import com.google.gson.GsonBuilder

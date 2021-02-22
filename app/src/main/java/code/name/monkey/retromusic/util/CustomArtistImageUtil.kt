@@ -23,7 +23,7 @@ import android.net.Uri
 import android.os.AsyncTask
 import android.provider.MediaStore
 import android.widget.Toast
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.model.Artist
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy

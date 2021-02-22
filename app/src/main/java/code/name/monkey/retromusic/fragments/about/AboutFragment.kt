@@ -23,7 +23,7 @@ import androidx.core.app.ShareCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.Constants
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.adapter.ContributorAdapter

@@ -22,7 +22,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.activities.MainActivity
 import code.name.monkey.retromusic.appwidgets.base.BaseAppWidget

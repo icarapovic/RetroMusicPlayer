@@ -3,7 +3,7 @@ package code.name.monkey.retromusic.util
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.ActivityCompat
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.activities.PurchaseActivity
 
 object PremiumShow {

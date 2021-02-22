@@ -30,7 +30,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.*
 import code.name.monkey.retromusic.fragments.NowPlayingScreen

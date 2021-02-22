@@ -21,7 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import code.name.monkey.appthemehelper.ThemeStore;
 import code.name.monkey.appthemehelper.util.TintHelper;
-import code.name.monkey.retromusic.App;
+import dev.icarapovic.music.App;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.artistimage.ArtistImage;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder;

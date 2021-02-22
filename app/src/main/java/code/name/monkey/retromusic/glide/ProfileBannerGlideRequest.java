@@ -4,7 +4,7 @@ import static code.name.monkey.retromusic.Constants.USER_BANNER;
 
 import android.graphics.Bitmap;
 import androidx.annotation.NonNull;
-import code.name.monkey.retromusic.App;
+import dev.icarapovic.music.App;
 import code.name.monkey.retromusic.R;
 import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.BitmapTypeRequest;

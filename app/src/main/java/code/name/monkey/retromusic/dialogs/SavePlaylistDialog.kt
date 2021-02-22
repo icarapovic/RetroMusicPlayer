@@ -21,7 +21,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.EXTRA_PLAYLIST
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.db.PlaylistWithSongs

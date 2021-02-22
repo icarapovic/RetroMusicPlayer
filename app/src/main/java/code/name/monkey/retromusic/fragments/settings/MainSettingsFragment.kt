@@ -22,7 +22,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import code.name.monkey.appthemehelper.ThemeStore
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.hide
 import code.name.monkey.retromusic.extensions.show

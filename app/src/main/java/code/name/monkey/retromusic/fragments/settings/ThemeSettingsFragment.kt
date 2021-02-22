@@ -27,6 +27,7 @@ import code.name.monkey.retromusic.*
 import code.name.monkey.retromusic.appshortcuts.DynamicShortcutManager
 import code.name.monkey.retromusic.util.PreferenceUtil
 import com.afollestad.materialdialogs.color.ColorChooserDialog
+import dev.icarapovic.music.App
 
 /**
  * @author Hemanth S (h4h13).

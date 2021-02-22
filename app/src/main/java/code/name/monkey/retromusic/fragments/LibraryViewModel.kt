@@ -24,6 +24,7 @@ import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
 import code.name.monkey.retromusic.model.*
 import code.name.monkey.retromusic.repository.RealRepository
 import code.name.monkey.retromusic.util.PreferenceUtil
+import dev.icarapovic.music.App
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch

@@ -28,7 +28,7 @@ import android.os.Build
 import android.text.TextUtils
 import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.service.MusicService

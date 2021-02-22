@@ -12,13 +12,16 @@
  * See the GNU General Public License for more details.
  *
  */
-package code.name.monkey.retromusic
+package dev.icarapovic.music
 
 import android.widget.Toast
 import androidx.multidex.MultiDexApplication
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
+import code.name.monkey.retromusic.BuildConfig
 import code.name.monkey.retromusic.Constants.PRO_VERSION_PRODUCT_ID
+import code.name.monkey.retromusic.R
+import code.name.monkey.retromusic.appModules
 import code.name.monkey.retromusic.appshortcuts.DynamicShortcutManager
 import com.anjlab.android.iab.v3.BillingProcessor
 import com.anjlab.android.iab.v3.TransactionDetails

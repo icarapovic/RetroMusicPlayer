@@ -1,6 +1,6 @@
 package code.name.monkey.retromusic.model.smartplaylist
 
-import code.name.monkey.retromusic.App
+import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.model.Song
 import kotlinx.android.parcel.Parcelize
