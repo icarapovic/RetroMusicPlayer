@@ -19,10 +19,12 @@ import android.os.Bundle
 import android.provider.MediaStore
 import code.name.monkey.retromusic.model.Song
 import code.name.monkey.retromusic.repository.RealSongRepository
+import org.koin.core.component.KoinApiExtension
 import java.util.*
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
+@KoinApiExtension
 object SearchQueryHelper : KoinComponent {
     private const val TITLE_SELECTION = "lower(" + MediaStore.Audio.AudioColumns.TITLE + ") = ?"
     private const val ALBUM_SELECTION = "lower(" + MediaStore.Audio.AudioColumns.ALBUM + ") = ?"

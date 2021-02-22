@@ -3,9 +3,11 @@ package code.name.monkey.retromusic.model
 import code.name.monkey.retromusic.repository.LastAddedRepository
 import code.name.monkey.retromusic.repository.SongRepository
 import code.name.monkey.retromusic.repository.TopPlayedRepository
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
+@KoinApiExtension
 abstract class AbsCustomPlaylist(
     id: Long,
     name: String

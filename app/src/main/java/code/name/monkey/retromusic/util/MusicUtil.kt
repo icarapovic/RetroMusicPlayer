@@ -12,6 +12,7 @@ import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.FragmentActivity
 import code.name.monkey.retromusic.R
@@ -33,14 +34,16 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.jaudiotagger.audio.AudioFileIO
 import org.jaudiotagger.tag.FieldKey
-import org.koin.core.KoinComponent
-import org.koin.core.get
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 import java.io.File
 import java.io.IOException
 import java.util.*
 import java.util.regex.Pattern
 
 
+@KoinApiExtension
 object MusicUtil : KoinComponent {
     fun createShareSongFileIntent(song: Song, context: Context): Intent? {
         return try {
@@ -328,16 +331,16 @@ object MusicUtil : KoinComponent {
     val repository = get<Repository>()
     fun toggleFavorite(context: Context, song: Song) {
         GlobalScope.launch {
-            val playlist: PlaylistEntity? = repository.favoritePlaylist()
-            if (playlist != null) {
-                val songEntity = song.toSongEntity(playlist.playListId)
-                val isFavorite = repository.isFavoriteSong(songEntity).isNotEmpty()
-                if (isFavorite) {
-                    repository.removeSongFromPlaylist(songEntity)
-                } else {
-                    repository.insertSongs(listOf(song.toSongEntity(playlist.playListId)))
-                }
+            val playlist: PlaylistEntity = repository.favoritePlaylist()
+
+            val songEntity = song.toSongEntity(playlist.playListId)
+            val isFavorite = repository.isFavoriteSong(songEntity).isNotEmpty()
+            if (isFavorite) {
+                repository.removeSongFromPlaylist(songEntity)
+            } else {
+                repository.insertSongs(listOf(song.toSongEntity(playlist.playListId)))
             }
+
             context.sendBroadcast(Intent(MusicService.FAVORITE_STATE_CHANGED))
         }
     }
@@ -432,7 +435,7 @@ object MusicUtil : KoinComponent {
             activity.runOnUiThread {
                 Toast.makeText(
                     activity,
-                    activity.getString(R.string.deleted_x_songs, songCount),
+                    String.format(activity.getString(R.string.deleted_x_songs), songCount),
                     Toast.LENGTH_SHORT
                 )
                     .show()

@@ -4,8 +4,10 @@ import code.name.monkey.retromusic.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.model.Song
 import kotlinx.android.parcel.Parcelize
-import org.koin.core.KoinComponent
+import org.koin.core.component.KoinApiExtension
+import org.koin.core.component.KoinComponent
 
+@KoinApiExtension
 @Parcelize
 class HistoryPlaylist : AbsSmartPlaylist(
     name = App.getContext().getString(R.string.history),

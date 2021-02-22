@@ -3,6 +3,10 @@
 buildscript {
     ext.kotlin_version = '1.4.30'
     ext.nav_version = '2.3.3'
+    ext.room_version = '2.2.6'
+    ext.lifecycle_version = '2.3.0'
+    ext.kotlin_coroutines_version = '1.4.2'
+    ext.koin_version = '2.2.2'
 
     repositories {
         jcenter()
