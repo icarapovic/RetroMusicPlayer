@@ -506,7 +506,7 @@ object MusicUtil : KoinComponent {
             }
             Toast.makeText(
                 context,
-                context.getString(R.string.deleted_x_songs, deletedCount),
+                String.format(context.getString(R.string.deleted_x_songs), deletedCount),
                 Toast.LENGTH_SHORT
             ).show()
         } catch (ignored: SecurityException) {
