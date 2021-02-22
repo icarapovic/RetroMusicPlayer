@@ -32,12 +32,6 @@ import code.name.monkey.retromusic.util.NavigationUtil
 
 abstract class AbsSettingsFragment : ATEPreferenceFragmentCompat() {
 
-    internal fun showProToastAndNavigate(message: String) {
-        Toast.makeText(requireContext(), "$message is Pro version feature.", Toast.LENGTH_SHORT)
-            .show()
-        NavigationUtil.goToProVersion(requireActivity())
-    }
-
     internal fun setSummary(preference: Preference, value: Any?) {
         val stringValue = value.toString()
         if (preference is ListPreference) {

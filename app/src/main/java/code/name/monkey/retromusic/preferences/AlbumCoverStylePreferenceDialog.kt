@@ -24,19 +24,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat.SRC_IN
 import androidx.fragment.app.DialogFragment
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
-import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.*
-import code.name.monkey.retromusic.fragments.AlbumCoverStyle
 import code.name.monkey.retromusic.fragments.AlbumCoverStyle.*
-import code.name.monkey.retromusic.util.NavigationUtil
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.ViewUtil
 import com.bumptech.glide.Glide
@@ -81,13 +77,7 @@ class AlbumCoverStylePreferenceDialog : DialogFragment(),
         return materialDialog(R.string.pref_title_album_cover_style)
             .setPositiveButton(R.string.set) { _, _ ->
                 val coverStyle = values()[viewPagerPosition]
-                if (isAlbumCoverStyle(coverStyle)) {
-                    val result = getString(coverStyle.titleRes) + " theme is Pro version feature."
-                    Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
-                    NavigationUtil.goToProVersion(requireActivity())
-                } else {
-                    PreferenceUtil.albumCoverStyle = coverStyle
-                }
+                PreferenceUtil.albumCoverStyle = coverStyle
             }
             .setView(view)
             .create()
@@ -120,15 +110,8 @@ class AlbumCoverStylePreferenceDialog : DialogFragment(),
 
             val image = layout.findViewById<ImageView>(R.id.image)
             val title = layout.findViewById<TextView>(R.id.title)
-            val proText = layout.findViewById<TextView>(R.id.proText)
             Glide.with(context).load(albumCoverStyle.drawableResId).into(image)
             title.setText(albumCoverStyle.titleRes)
-            if (isAlbumCoverStyle(albumCoverStyle)) {
-                proText.show()
-                proText.setText(R.string.pro)
-            } else {
-                proText.hide()
-            }
             return layout
         }
 
@@ -160,8 +143,4 @@ class AlbumCoverStylePreferenceDialog : DialogFragment(),
             return AlbumCoverStylePreferenceDialog()
         }
     }
-}
-
-private fun isAlbumCoverStyle(style: AlbumCoverStyle): Boolean {
-    return (!App.isProVersion() && (style == Circle || style == Card || style == FullCard))
 }

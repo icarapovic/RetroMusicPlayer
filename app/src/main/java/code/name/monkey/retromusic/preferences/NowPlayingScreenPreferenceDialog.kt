@@ -23,19 +23,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat.SRC_IN
 import androidx.fragment.app.DialogFragment
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
-import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.*
-import code.name.monkey.retromusic.fragments.NowPlayingScreen
 import code.name.monkey.retromusic.fragments.NowPlayingScreen.*
-import code.name.monkey.retromusic.util.NavigationUtil
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.ViewUtil
 import com.bumptech.glide.Glide
@@ -89,14 +85,7 @@ class NowPlayingScreenPreferenceDialog : DialogFragment(), ViewPager.OnPageChang
             .setCancelable(false)
             .setPositiveButton(R.string.set) { _, _ ->
                 val nowPlayingScreen = values()[viewPagerPosition]
-                if (isNowPlayingThemes(nowPlayingScreen)) {
-                    val result =
-                        "${getString(nowPlayingScreen.titleRes)} theme is Pro version feature."
-                    Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
-                    NavigationUtil.goToProVersion(requireContext())
-                } else {
-                    PreferenceUtil.nowPlayingScreen = nowPlayingScreen
-                }
+                PreferenceUtil.nowPlayingScreen = nowPlayingScreen
             }
             .setView(view)
             .create()
@@ -125,15 +114,8 @@ private class NowPlayingScreenAdapter(private val context: Context) : PagerAdapt
 
         val image = layout.findViewById<ImageView>(R.id.image)
         val title = layout.findViewById<TextView>(R.id.title)
-        val proText = layout.findViewById<TextView>(R.id.proText)
         Glide.with(context).load(nowPlayingScreen.drawableResId).into(image)
         title.setText(nowPlayingScreen.titleRes)
-        if (isNowPlayingThemes(nowPlayingScreen)) {
-            proText.show()
-            proText.setText(R.string.pro)
-        }else{
-            proText.hide()
-        }
         return layout
     }
 
@@ -156,8 +138,4 @@ private class NowPlayingScreenAdapter(private val context: Context) : PagerAdapt
     override fun getPageTitle(position: Int): CharSequence? {
         return context.getString(values()[position].titleRes)
     }
-}
-
-private fun isNowPlayingThemes(screen: NowPlayingScreen): Boolean {
-    return (screen == Full || screen == Card || screen == Plain || screen == Blur || screen == Color || screen == Simple || screen == BlurCard || screen == Circle || screen == Adaptive) && !App.isProVersion()
 }
