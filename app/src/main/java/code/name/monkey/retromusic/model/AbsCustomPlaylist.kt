@@ -3,6 +3,8 @@ package code.name.monkey.retromusic.model
 import code.name.monkey.retromusic.repository.LastAddedRepository
 import code.name.monkey.retromusic.repository.SongRepository
 import code.name.monkey.retromusic.repository.TopPlayedRepository
+import dev.icarapovic.music.domain.model.Playlist
+import dev.icarapovic.music.domain.model.Song
 import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

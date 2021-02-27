@@ -33,7 +33,7 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="m">
         <activity
-            android:name=".activities.MainActivity"
+            android:name="dev.icarapovic.music.ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -106,19 +106,19 @@
                 <data android:mimeType="vnd.android.cursor.dir/audio" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PlayingQueueActivity" />
-        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name="dev.icarapovic.music.ui.PlayingQueueActivity" />
+        <activity android:name="dev.icarapovic.music.ui.SettingsActivity" />
         <activity android:name=".activities.tageditor.AlbumTagEditorActivity" />
         <activity android:name=".activities.tageditor.SongTagEditorActivity" />
-        <activity android:name=".activities.LyricsActivity" />
-        <activity android:name=".activities.UserInfoActivity" />
-        <activity android:name=".activities.LicenseActivity" />
-        <activity android:name=".activities.WhatsNewActivity" />
+        <activity android:name="dev.icarapovic.music.ui.LyricsActivity" />
+        <activity android:name="dev.icarapovic.music.ui.UserInfoActivity" />
+        <activity android:name="dev.icarapovic.music.ui.LicenseActivity" />
+        <activity android:name="dev.icarapovic.music.ui.WhatsNewActivity" />
         <activity android:name=".activities.bugreport.BugReportActivity" />
-        <activity android:name=".activities.ShareInstagramStory" />
-        <activity android:name=".activities.DriveModeActivity" />
-        <activity android:name=".activities.PermissionActivity" />
-        <activity android:name=".activities.LockScreenActivity" />
+        <activity android:name="dev.icarapovic.music.ui.ShareInstagramStory" />
+        <activity android:name="dev.icarapovic.music.ui.DriveModeActivity" />
+        <activity android:name="dev.icarapovic.music.ui.PermissionActivity" />
+        <activity android:name="dev.icarapovic.music.ui.LockScreenActivity" />
 
         <activity
             android:name=".appshortcuts.AppShortcutLauncherActivity"
@@ -150,7 +150,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name=".service.MediaButtonIntentReceiver">
+        <receiver android:name="dev.icarapovic.music.data.service.MediaButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
@@ -226,7 +226,7 @@
         </receiver>
 
         <service
-            android:name=".service.MusicService"
+            android:name="dev.icarapovic.music.data.service.MusicService"
             android:enabled="true"
             android:exported="true"
             android:label="@string/app_name"

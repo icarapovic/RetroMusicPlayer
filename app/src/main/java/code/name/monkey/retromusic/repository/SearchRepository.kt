@@ -16,7 +16,7 @@ package code.name.monkey.retromusic.repository
 
 import android.content.Context
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.model.Genre
+import dev.icarapovic.music.domain.model.Genre
 import java.util.*
 
 class RealSearchRepository(

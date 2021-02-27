@@ -14,7 +14,7 @@
 
 package code.name.monkey.retromusic.model.lyrics;
 
-import code.name.monkey.retromusic.model.Song;
+import dev.icarapovic.music.domain.model.Song;
 import java.util.ArrayList;
 
 public class Lyrics {

@@ -16,11 +16,9 @@ package code.name.monkey.retromusic.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
 import code.name.monkey.retromusic.helper.SortOrder
-import code.name.monkey.retromusic.model.Album
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Album
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.util.PreferenceUtil
-import java.util.*
-import kotlin.collections.ArrayList
 
 
 /**

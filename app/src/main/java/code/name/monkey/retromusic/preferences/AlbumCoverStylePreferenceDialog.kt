@@ -32,7 +32,7 @@ import androidx.viewpager.widget.ViewPager
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.extensions.*
-import code.name.monkey.retromusic.fragments.AlbumCoverStyle.*
+import dev.icarapovic.music.ui.fragments.AlbumCoverStyle.*
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.ViewUtil
 import com.bumptech.glide.Glide

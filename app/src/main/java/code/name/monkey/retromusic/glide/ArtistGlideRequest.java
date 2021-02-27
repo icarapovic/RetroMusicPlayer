@@ -26,7 +26,7 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.artistimage.ArtistImage;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
-import code.name.monkey.retromusic.model.Artist;
+import dev.icarapovic.music.domain.model.Artist;
 import code.name.monkey.retromusic.util.ArtistSignatureUtil;
 import code.name.monkey.retromusic.util.CustomArtistImageUtil;
 import com.bumptech.glide.BitmapRequestBuilder;

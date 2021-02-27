@@ -21,7 +21,7 @@ import android.provider.MediaStore;
 import android.webkit.MimeTypeMap;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import code.name.monkey.retromusic.model.Song;
+import dev.icarapovic.music.domain.model.Song;
 import code.name.monkey.retromusic.repository.RealSongRepository;
 import code.name.monkey.retromusic.repository.SortedCursor;
 import java.io.BufferedReader;

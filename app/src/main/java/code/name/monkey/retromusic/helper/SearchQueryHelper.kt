@@ -17,7 +17,7 @@ package code.name.monkey.retromusic.helper
 import android.app.SearchManager
 import android.os.Bundle
 import android.provider.MediaStore
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.repository.RealSongRepository
 import org.koin.core.component.KoinApiExtension
 import java.util.*

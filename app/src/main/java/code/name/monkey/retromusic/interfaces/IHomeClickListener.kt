@@ -1,8 +1,8 @@
 package code.name.monkey.retromusic.interfaces
 
-import code.name.monkey.retromusic.model.Album
-import code.name.monkey.retromusic.model.Artist
-import code.name.monkey.retromusic.model.Genre
+import dev.icarapovic.music.domain.model.Album
+import dev.icarapovic.music.domain.model.Artist
+import dev.icarapovic.music.domain.model.Genre
 
 interface IHomeClickListener {
     fun onAlbumClick(album: Album)

@@ -51,7 +51,5 @@ class App : MultiDexApplication() {
         fun getContext(): App {
             return instance!!
         }
-
-        fun isProVersion() = true
     }
 }

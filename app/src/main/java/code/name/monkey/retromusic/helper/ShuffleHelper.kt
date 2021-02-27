@@ -14,7 +14,7 @@
  */
 package code.name.monkey.retromusic.helper
 
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Song
 
 object ShuffleHelper {
 

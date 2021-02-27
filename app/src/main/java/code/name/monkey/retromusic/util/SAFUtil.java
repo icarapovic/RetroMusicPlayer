@@ -30,7 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.fragment.app.Fragment;
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Song;
+import dev.icarapovic.music.domain.model.Song;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

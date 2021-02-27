@@ -24,7 +24,7 @@ import android.os.AsyncTask
 import android.provider.MediaStore
 import android.widget.Toast
 import dev.icarapovic.music.App
-import code.name.monkey.retromusic.model.Artist
+import dev.icarapovic.music.domain.model.Artist
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.animation.GlideAnimation

@@ -10,9 +10,9 @@ import androidx.viewpager.widget.ViewPager
 import code.name.monkey.retromusic.*
 import code.name.monkey.retromusic.extensions.getIntRes
 import code.name.monkey.retromusic.extensions.getStringOrDefault
-import code.name.monkey.retromusic.fragments.AlbumCoverStyle
-import code.name.monkey.retromusic.fragments.NowPlayingScreen
-import code.name.monkey.retromusic.fragments.folder.FoldersFragment
+import dev.icarapovic.music.ui.fragments.AlbumCoverStyle
+import dev.icarapovic.music.ui.fragments.NowPlayingScreen
+import dev.icarapovic.music.ui.fragments.folder.FoldersFragment
 import code.name.monkey.retromusic.helper.SortOrder.*
 import code.name.monkey.retromusic.model.CategoryInfo
 import code.name.monkey.retromusic.transform.*

@@ -25,12 +25,12 @@ import android.view.View
 import android.widget.RemoteViews
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.activities.MainActivity
+import dev.icarapovic.music.ui.MainActivity
 import code.name.monkey.retromusic.appwidgets.base.BaseAppWidget
 import code.name.monkey.retromusic.glide.SongGlideRequest
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper
-import code.name.monkey.retromusic.service.MusicService
-import code.name.monkey.retromusic.service.MusicService.*
+import dev.icarapovic.music.data.service.MusicService
+import dev.icarapovic.music.data.service.MusicService.*
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.RetroUtil
 import com.bumptech.glide.Glide

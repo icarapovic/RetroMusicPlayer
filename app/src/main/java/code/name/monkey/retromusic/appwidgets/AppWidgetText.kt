@@ -24,10 +24,10 @@ import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
 import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.activities.MainActivity
+import dev.icarapovic.music.ui.MainActivity
 import code.name.monkey.retromusic.appwidgets.base.BaseAppWidget
-import code.name.monkey.retromusic.service.MusicService
-import code.name.monkey.retromusic.service.MusicService.*
+import dev.icarapovic.music.data.service.MusicService
+import dev.icarapovic.music.data.service.MusicService.*
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.RetroUtil
 

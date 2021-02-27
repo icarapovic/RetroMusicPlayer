@@ -14,10 +14,10 @@
  */
 package code.name.monkey.retromusic.helper
 
-import code.name.monkey.retromusic.db.PlaylistWithSongs
-import code.name.monkey.retromusic.db.toSongs
-import code.name.monkey.retromusic.model.Playlist
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.data.db.PlaylistWithSongs
+import dev.icarapovic.music.data.db.toSongs
+import dev.icarapovic.music.domain.model.Playlist
+import dev.icarapovic.music.domain.model.Song
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter

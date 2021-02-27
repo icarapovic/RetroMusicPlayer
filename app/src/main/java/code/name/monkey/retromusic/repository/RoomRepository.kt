@@ -2,23 +2,23 @@ package code.name.monkey.retromusic.repository
 
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import code.name.monkey.retromusic.db.BlackListStoreDao
-import code.name.monkey.retromusic.db.BlackListStoreEntity
-import code.name.monkey.retromusic.db.HistoryDao
-import code.name.monkey.retromusic.db.HistoryEntity
-import code.name.monkey.retromusic.db.LyricsDao
-import code.name.monkey.retromusic.db.PlayCountDao
-import code.name.monkey.retromusic.db.PlayCountEntity
-import code.name.monkey.retromusic.db.PlaylistDao
-import code.name.monkey.retromusic.db.PlaylistEntity
-import code.name.monkey.retromusic.db.PlaylistWithSongs
-import code.name.monkey.retromusic.db.SongEntity
-import code.name.monkey.retromusic.db.toHistoryEntity
+import dev.icarapovic.music.data.db.BlackListStoreDao
+import dev.icarapovic.music.data.db.BlackListStoreEntity
+import dev.icarapovic.music.data.db.HistoryDao
+import dev.icarapovic.music.data.db.HistoryEntity
+import dev.icarapovic.music.data.db.LyricsDao
+import dev.icarapovic.music.data.db.PlayCountDao
+import dev.icarapovic.music.data.db.PlayCountEntity
+import dev.icarapovic.music.data.db.PlaylistDao
+import dev.icarapovic.music.data.db.PlaylistEntity
+import dev.icarapovic.music.data.db.PlaylistWithSongs
+import dev.icarapovic.music.data.db.SongEntity
+import dev.icarapovic.music.data.db.toHistoryEntity
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_A_Z
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_SONG_COUNT
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_SONG_COUNT_DESC
 import code.name.monkey.retromusic.helper.SortOrder.PlaylistSortOrder.Companion.PLAYLIST_Z_A
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.util.PreferenceUtil
 
 

@@ -25,7 +25,7 @@ import androidx.fragment.app.DialogFragment
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEDialogPreference
 import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.dialogs.BlacklistFolderChooserDialog
+import dev.icarapovic.music.ui.dialogs.BlacklistFolderChooserDialog
 import code.name.monkey.retromusic.extensions.colorButtons
 import code.name.monkey.retromusic.extensions.colorControlNormal
 import code.name.monkey.retromusic.extensions.materialDialog

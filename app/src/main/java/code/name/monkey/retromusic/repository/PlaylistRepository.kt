@@ -26,9 +26,9 @@ import code.name.monkey.retromusic.extensions.getInt
 import code.name.monkey.retromusic.extensions.getLong
 import code.name.monkey.retromusic.extensions.getString
 import code.name.monkey.retromusic.extensions.getStringOrNull
-import code.name.monkey.retromusic.model.Playlist
-import code.name.monkey.retromusic.model.PlaylistSong
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Playlist
+import dev.icarapovic.music.domain.model.PlaylistSong
+import dev.icarapovic.music.domain.model.Song
 
 /**
  * Created by hemanths on 16/08/17.

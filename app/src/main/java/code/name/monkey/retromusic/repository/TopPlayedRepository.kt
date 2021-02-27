@@ -19,9 +19,9 @@ import android.database.Cursor
 import android.provider.BaseColumns
 import android.provider.MediaStore
 import code.name.monkey.retromusic.Constants.NUMBER_OF_TOP_TRACKS
-import code.name.monkey.retromusic.model.Album
-import code.name.monkey.retromusic.model.Artist
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Album
+import dev.icarapovic.music.domain.model.Artist
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.providers.HistoryStore
 import code.name.monkey.retromusic.providers.SongPlayCountStore
 import code.name.monkey.retromusic.util.PreferenceUtil

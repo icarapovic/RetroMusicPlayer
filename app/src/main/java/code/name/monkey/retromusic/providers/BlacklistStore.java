@@ -14,7 +14,7 @@
 
 package code.name.monkey.retromusic.providers;
 
-import static code.name.monkey.retromusic.service.MusicService.MEDIA_STORE_CHANGED;
+import static dev.icarapovic.music.data.service.MusicService.MEDIA_STORE_CHANGED;
 
 import android.content.ContentValues;
 import android.content.Context;

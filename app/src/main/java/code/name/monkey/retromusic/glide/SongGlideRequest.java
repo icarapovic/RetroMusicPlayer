@@ -21,7 +21,7 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.audiocover.AudioFileCover;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
-import code.name.monkey.retromusic.model.Song;
+import dev.icarapovic.music.domain.model.Song;
 import code.name.monkey.retromusic.util.MusicUtil;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 import com.bumptech.glide.BitmapRequestBuilder;

@@ -15,8 +15,8 @@
 package code.name.monkey.retromusic.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
-import code.name.monkey.retromusic.model.Album
-import code.name.monkey.retromusic.model.Artist
+import dev.icarapovic.music.domain.model.Album
+import dev.icarapovic.music.domain.model.Artist
 import code.name.monkey.retromusic.util.PreferenceUtil
 
 interface ArtistRepository {

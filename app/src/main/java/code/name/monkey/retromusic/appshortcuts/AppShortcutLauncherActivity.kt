@@ -21,12 +21,12 @@ import code.name.monkey.retromusic.appshortcuts.shortcuttype.LastAddedShortcutTy
 import code.name.monkey.retromusic.appshortcuts.shortcuttype.ShuffleAllShortcutType
 import code.name.monkey.retromusic.appshortcuts.shortcuttype.TopTracksShortcutType
 import code.name.monkey.retromusic.extensions.extraNotNull
-import code.name.monkey.retromusic.model.Playlist
+import dev.icarapovic.music.domain.model.Playlist
 import code.name.monkey.retromusic.model.smartplaylist.LastAddedPlaylist
 import code.name.monkey.retromusic.model.smartplaylist.ShuffleAllPlaylist
 import code.name.monkey.retromusic.model.smartplaylist.TopTracksPlaylist
-import code.name.monkey.retromusic.service.MusicService
-import code.name.monkey.retromusic.service.MusicService.*
+import dev.icarapovic.music.data.service.MusicService
+import dev.icarapovic.music.data.service.MusicService.*
 
 class AppShortcutLauncherActivity : Activity() {
 

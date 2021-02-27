@@ -30,9 +30,9 @@ import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
 import dev.icarapovic.music.App
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.model.Song
-import code.name.monkey.retromusic.service.MusicService
-import code.name.monkey.retromusic.service.MusicService.*
+import dev.icarapovic.music.domain.model.Song
+import dev.icarapovic.music.data.service.MusicService
+import dev.icarapovic.music.data.service.MusicService.*
 
 abstract class BaseAppWidget : AppWidgetProvider() {
 

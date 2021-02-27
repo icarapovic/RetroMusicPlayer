@@ -16,10 +16,10 @@ package code.name.monkey.retromusic.helper.menu
 
 import androidx.fragment.app.FragmentActivity
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog
-import code.name.monkey.retromusic.dialogs.DeleteSongsDialog
+import dev.icarapovic.music.ui.dialogs.AddToPlaylistDialog
+import dev.icarapovic.music.ui.dialogs.DeleteSongsDialog
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.repository.RealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

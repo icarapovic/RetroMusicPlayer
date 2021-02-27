@@ -33,7 +33,7 @@ import code.name.monkey.retromusic.extensions.appHandleColor
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper
 import code.name.monkey.retromusic.model.ArtworkInfo
-import code.name.monkey.retromusic.model.Song
+import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.util.ImageUtil
 import code.name.monkey.retromusic.util.RetroColorUtil.generatePalette
 import code.name.monkey.retromusic.util.RetroColorUtil.getColor
@@ -41,6 +41,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.animation.GlideAnimation
 import com.bumptech.glide.request.target.SimpleTarget
+import dev.icarapovic.music.ui.base.AbsTagEditorActivity
 import java.util.*
 import kotlinx.android.synthetic.main.activity_album_tag_editor.*
 import org.jaudiotagger.tag.FieldKey

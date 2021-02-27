@@ -35,7 +35,7 @@ import code.name.monkey.appthemehelper.util.MaterialUtil
 import code.name.monkey.appthemehelper.util.TintHelper
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.activities.base.AbsThemeActivity
+import dev.icarapovic.music.ui.base.AbsThemeActivity
 import code.name.monkey.retromusic.activities.bugreport.model.DeviceInfo
 import code.name.monkey.retromusic.activities.bugreport.model.Report
 import code.name.monkey.retromusic.activities.bugreport.model.github.ExtraInfo
