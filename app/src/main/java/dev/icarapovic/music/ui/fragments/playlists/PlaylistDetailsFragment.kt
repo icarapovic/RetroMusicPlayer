@@ -15,8 +15,8 @@ import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.song.ShuffleButtonSongAdapter
 import dev.icarapovic.music.data.db.PlaylistWithSongs
 import dev.icarapovic.music.data.db.toSongs
-import code.name.monkey.retromusic.extensions.dipToPix
-import code.name.monkey.retromusic.extensions.resolveColor
+import dev.icarapovic.music.extensions.dipToPix
+import dev.icarapovic.music.extensions.resolveColor
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import code.name.monkey.retromusic.helper.menu.PlaylistMenuHelper
 import dev.icarapovic.music.domain.model.Song

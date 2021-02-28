@@ -18,8 +18,8 @@ import android.view.View
 import androidx.fragment.app.FragmentActivity
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.applyColor
-import code.name.monkey.retromusic.extensions.applyOutlineColor
+import dev.icarapovic.music.extensions.applyColor
+import dev.icarapovic.music.extensions.applyOutlineColor
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.ICabHolder
 import dev.icarapovic.music.domain.model.Song

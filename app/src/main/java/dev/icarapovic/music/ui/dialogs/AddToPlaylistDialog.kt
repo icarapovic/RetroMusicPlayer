@@ -25,9 +25,9 @@ import code.name.monkey.retromusic.EXTRA_SONG
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.data.db.PlaylistEntity
 import dev.icarapovic.music.data.db.toSongsEntity
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.extraNotNull
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.extraNotNull
+import dev.icarapovic.music.extensions.materialDialog
 import dev.icarapovic.music.ui.fragments.LibraryViewModel
 import dev.icarapovic.music.ui.fragments.ReloadType.Playlists
 import dev.icarapovic.music.domain.model.Song

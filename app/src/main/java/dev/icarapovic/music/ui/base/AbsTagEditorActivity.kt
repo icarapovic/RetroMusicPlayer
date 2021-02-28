@@ -33,10 +33,10 @@ import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.R.drawable
 import code.name.monkey.retromusic.activities.saf.SAFGuideActivity
 import code.name.monkey.retromusic.activities.tageditor.WriteTagsAsyncTask
-import code.name.monkey.retromusic.extensions.accentColor
+import dev.icarapovic.music.extensions.accentColor
 import code.name.monkey.retromusic.model.ArtworkInfo
 import code.name.monkey.retromusic.model.LoadingInfo
-import code.name.monkey.retromusic.repository.Repository
+import dev.icarapovic.music.domain.repository.Repository
 import code.name.monkey.retromusic.util.RetroUtil
 import code.name.monkey.retromusic.util.SAFUtil
 import com.google.android.material.button.MaterialButton

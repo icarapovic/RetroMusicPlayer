@@ -26,7 +26,7 @@ import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import code.name.monkey.appthemehelper.util.TintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.applyColor
+import dev.icarapovic.music.extensions.applyColor
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerControlsFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper

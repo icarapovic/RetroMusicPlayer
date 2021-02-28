@@ -22,7 +22,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceManager
 import code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceFragmentCompat
-import code.name.monkey.retromusic.preferences.*
+import dev.icarapovic.music.ui.dialogs.preferences.*
 
 /**
  * @author Hemanth S (h4h13).

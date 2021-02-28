@@ -31,7 +31,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.SearchAdapter
-import code.name.monkey.retromusic.extensions.*
+import dev.icarapovic.music.extensions.*
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.transition.MaterialArcMotion

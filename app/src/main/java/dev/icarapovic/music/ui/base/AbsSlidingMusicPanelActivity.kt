@@ -29,7 +29,7 @@ import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.RetroBottomSheetBehavior
-import code.name.monkey.retromusic.extensions.*
+import dev.icarapovic.music.extensions.*
 import dev.icarapovic.music.ui.fragments.LibraryViewModel
 import dev.icarapovic.music.ui.fragments.MiniPlayerFragment
 import dev.icarapovic.music.ui.fragments.NowPlayingScreen
@@ -55,7 +55,7 @@ import dev.icarapovic.music.ui.fragments.player.tiny.TinyPlayerFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.model.CategoryInfo
 import code.name.monkey.retromusic.util.PreferenceUtil
-import code.name.monkey.retromusic.views.BottomNavigationBarTinted
+import dev.icarapovic.music.ui.views.BottomNavigationBarTinted
 import com.google.android.material.bottomsheet.BottomSheetBehavior.*
 import kotlinx.android.synthetic.main.sliding_music_panel_layout.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -23,12 +23,12 @@ import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
 import dev.icarapovic.music.domain.model.Artist
 import dev.icarapovic.music.data.network.Result
 import dev.icarapovic.music.data.network.model.LastFmArtist
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 class ArtistDetailsViewModel(
-    private val realRepository: RealRepository,
+    private val realRepository: RepositoryImpl,
     private val artistId: Long
 ) : ViewModel(), IMusicServiceEventListener {
     private val artistDetails = MutableLiveData<Artist>()

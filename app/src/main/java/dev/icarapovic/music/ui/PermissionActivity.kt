@@ -23,8 +23,8 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsMusicServiceActivity
-import code.name.monkey.retromusic.extensions.accentBackgroundColor
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.accentBackgroundColor
+import dev.icarapovic.music.extensions.show
 import code.name.monkey.retromusic.util.RingtoneManager
 import kotlinx.android.synthetic.main.activity_permission.*
 import kotlinx.android.synthetic.main.fragment_library.appNameText

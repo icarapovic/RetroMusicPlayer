@@ -28,7 +28,7 @@ import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.dialogs.CreatePlaylistDialog
 import dev.icarapovic.music.ui.dialogs.ImportPlaylistDialog
-import code.name.monkey.retromusic.extensions.whichFragment
+import dev.icarapovic.music.extensions.whichFragment
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import code.name.monkey.retromusic.model.CategoryInfo
 import code.name.monkey.retromusic.util.PreferenceUtil

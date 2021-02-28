@@ -29,7 +29,7 @@ import android.widget.Toast
 import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.MaterialUtil
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.appHandleColor
+import dev.icarapovic.music.extensions.appHandleColor
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper
 import code.name.monkey.retromusic.model.ArtworkInfo

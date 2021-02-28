@@ -18,7 +18,7 @@ import code.name.monkey.appthemehelper.ThemeStore.Companion.accentColor
 import code.name.monkey.appthemehelper.util.ColorUtil.isColorLight
 import code.name.monkey.appthemehelper.util.MaterialValueHelper.getPrimaryTextColor
 import code.name.monkey.appthemehelper.util.TintHelper
-import code.name.monkey.retromusic.views.PopupBackground
+import dev.icarapovic.music.ui.views.PopupBackground
 import me.zhanghai.android.fastscroll.FastScroller
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import me.zhanghai.android.fastscroll.PopupStyles

@@ -33,7 +33,7 @@ import code.name.monkey.retromusic.*
 import dev.icarapovic.music.ui.adapter.album.AlbumAdapter
 import dev.icarapovic.music.ui.adapter.artist.ArtistAdapter
 import dev.icarapovic.music.ui.adapter.song.SongAdapter
-import code.name.monkey.retromusic.extensions.hide
+import dev.icarapovic.music.extensions.hide
 import code.name.monkey.retromusic.glide.SongGlideRequest
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IAlbumClickListener

@@ -26,11 +26,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.accentColor
-import code.name.monkey.retromusic.extensions.applyColor
-import code.name.monkey.retromusic.extensions.show
-import code.name.monkey.retromusic.extensions.textColorPrimary
-import code.name.monkey.retromusic.extensions.textColorSecondary
+import dev.icarapovic.music.extensions.accentColor
+import dev.icarapovic.music.extensions.applyColor
+import dev.icarapovic.music.extensions.show
+import dev.icarapovic.music.extensions.textColorPrimary
+import dev.icarapovic.music.extensions.textColorSecondary
 import dev.icarapovic.music.ui.fragments.base.AbsMusicServiceFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper

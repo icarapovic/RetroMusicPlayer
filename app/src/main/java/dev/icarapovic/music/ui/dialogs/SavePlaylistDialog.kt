@@ -25,9 +25,9 @@ import dev.icarapovic.music.App
 import code.name.monkey.retromusic.EXTRA_PLAYLIST
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.data.db.PlaylistWithSongs
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.extraNotNull
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.extraNotNull
+import dev.icarapovic.music.extensions.materialDialog
 import code.name.monkey.retromusic.util.PlaylistsUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

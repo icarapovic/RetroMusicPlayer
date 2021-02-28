@@ -24,7 +24,7 @@ import code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreferenc
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.*
-import code.name.monkey.retromusic.appshortcuts.DynamicShortcutManager
+import dev.icarapovic.music.ui.appshortcuts.DynamicShortcutManager
 import code.name.monkey.retromusic.util.PreferenceUtil
 import com.afollestad.materialdialogs.color.ColorChooserDialog
 

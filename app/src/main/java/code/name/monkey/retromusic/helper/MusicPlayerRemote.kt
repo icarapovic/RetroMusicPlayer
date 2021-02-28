@@ -26,7 +26,7 @@ import android.provider.DocumentsContract
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.SongRepository
+import dev.icarapovic.music.domain.repository.SongRepository
 import dev.icarapovic.music.data.service.MusicService
 import code.name.monkey.retromusic.util.PreferenceUtil
 import org.koin.core.component.KoinApiExtension

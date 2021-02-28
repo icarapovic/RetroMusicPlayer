@@ -22,7 +22,7 @@ import dev.icarapovic.music.ui.fragments.ReloadType.*
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
 import code.name.monkey.retromusic.model.*
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.App
 import dev.icarapovic.music.domain.model.*
@@ -32,7 +32,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class LibraryViewModel(
-    private val repository: RealRepository
+    private val repository: RepositoryImpl
 ) : ViewModel(), IMusicServiceEventListener {
 
     private val _paletteColor = MutableLiveData<Int>()

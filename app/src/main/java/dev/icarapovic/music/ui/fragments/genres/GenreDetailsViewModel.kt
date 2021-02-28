@@ -21,13 +21,13 @@ import androidx.lifecycle.viewModelScope
 import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
 import dev.icarapovic.music.domain.model.Genre
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class GenreDetailsViewModel(
-    private val realRepository: RealRepository,
+    private val realRepository: RepositoryImpl,
     private val genre: Genre
 ) : ViewModel(), IMusicServiceEventListener {
 

@@ -18,16 +18,16 @@ import code.name.monkey.retromusic.R
 import dev.icarapovic.music.data.db.PlaylistEntity
 import dev.icarapovic.music.data.db.SongEntity
 import dev.icarapovic.music.data.db.toSongEntity
-import code.name.monkey.retromusic.extensions.getLong
+import dev.icarapovic.music.extensions.getLong
 import code.name.monkey.retromusic.helper.MusicPlayerRemote.removeFromQueue
 import dev.icarapovic.music.domain.model.Artist
 import dev.icarapovic.music.domain.model.Playlist
 import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.model.lyrics.AbsSynchronizedLyrics
-import code.name.monkey.retromusic.repository.RealPlaylistRepository
-import code.name.monkey.retromusic.repository.RealSongRepository
-import code.name.monkey.retromusic.repository.Repository
-import code.name.monkey.retromusic.repository.SongRepository
+import dev.icarapovic.music.data.repository.PlaylistRepositoryImpl
+import dev.icarapovic.music.data.repository.SongRepositoryImpl
+import dev.icarapovic.music.domain.repository.Repository
+import dev.icarapovic.music.domain.repository.SongRepository
 import dev.icarapovic.music.data.service.MusicService
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -345,11 +345,11 @@ object MusicUtil : KoinComponent {
     }
 
     private fun getFavoritesPlaylist(context: Context): Playlist {
-        return RealPlaylistRepository(context.contentResolver).playlist(context.getString(R.string.favorites))
+        return PlaylistRepositoryImpl(context.contentResolver).playlist(context.getString(R.string.favorites))
     }
 
     private fun getOrCreateFavoritesPlaylist(context: Context): Playlist {
-        return RealPlaylistRepository(context.contentResolver).playlist(
+        return PlaylistRepositoryImpl(context.contentResolver).playlist(
             PlaylistsUtil.createPlaylist(
                 context,
                 context.getString(R.string.favorites)
@@ -467,7 +467,7 @@ object MusicUtil : KoinComponent {
                 cursor.moveToFirst()
                 while (!cursor.isAfterLast) {
                     val id = cursor.getLong(BaseColumns._ID)
-                    val song: Song = RealSongRepository(context).song(id)
+                    val song: Song = SongRepositoryImpl(context).song(id)
                     removeFromQueue(song)
                     cursor.moveToNext()
                 }

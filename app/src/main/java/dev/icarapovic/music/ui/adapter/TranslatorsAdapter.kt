@@ -21,10 +21,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.hide
+import dev.icarapovic.music.extensions.hide
 import code.name.monkey.retromusic.model.Contributor
 import code.name.monkey.retromusic.util.RetroUtil
-import code.name.monkey.retromusic.views.RetroShapeableImageView
+import dev.icarapovic.music.ui.views.RetroShapeableImageView
 
 class TranslatorsAdapter(
     private var contributors: List<Contributor>

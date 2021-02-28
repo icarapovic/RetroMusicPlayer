@@ -42,7 +42,7 @@
 
     </FrameLayout>
 
-    <code.name.monkey.retromusic.views.BottomNavigationBarTinted
+    <dev.icarapovic.music.ui.views.BottomNavigationBarTinted
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="56dp"

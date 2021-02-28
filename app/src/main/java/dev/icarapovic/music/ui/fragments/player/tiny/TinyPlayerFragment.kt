@@ -23,8 +23,8 @@ import android.view.animation.LinearInterpolator
 import androidx.appcompat.widget.Toolbar
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
 import dev.icarapovic.music.ui.fragments.MiniPlayerFragment
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerFragment
 import dev.icarapovic.music.ui.fragments.player.PlayerAlbumCoverFragment

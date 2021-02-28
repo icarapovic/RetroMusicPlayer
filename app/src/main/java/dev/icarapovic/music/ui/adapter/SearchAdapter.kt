@@ -34,7 +34,7 @@ import code.name.monkey.retromusic.glide.ArtistGlideRequest
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.menu.SongMenuHelper
 import code.name.monkey.retromusic.model.smartplaylist.AbsSmartPlaylist
-import code.name.monkey.retromusic.repository.PlaylistSongsLoader
+import dev.icarapovic.music.data.repository.PlaylistSongsLoader
 import code.name.monkey.retromusic.util.MusicUtil
 import com.bumptech.glide.Glide
 import dev.icarapovic.music.domain.model.*

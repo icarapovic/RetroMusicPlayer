@@ -22,9 +22,9 @@ import androidx.fragment.app.DialogFragment
 import code.name.monkey.retromusic.EXTRA_SONG
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.data.db.SongEntity
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.extraNotNull
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.extraNotNull
+import dev.icarapovic.music.extensions.materialDialog
 import dev.icarapovic.music.ui.fragments.LibraryViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

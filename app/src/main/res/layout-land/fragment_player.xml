@@ -37,7 +37,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <code.name.monkey.retromusic.views.HeightFitSquareLayout
+            <dev.icarapovic.music.ui.views.HeightFitSquareLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_album_cover" />
-            </code.name.monkey.retromusic.views.HeightFitSquareLayout>
+            </dev.icarapovic.music.ui.views.HeightFitSquareLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

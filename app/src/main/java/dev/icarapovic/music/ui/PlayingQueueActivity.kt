@@ -24,8 +24,8 @@ import code.name.monkey.appthemehelper.util.MaterialValueHelper
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsMusicServiceActivity
 import dev.icarapovic.music.ui.adapter.song.PlayingQueueAdapter
-import code.name.monkey.retromusic.extensions.accentColor
-import code.name.monkey.retromusic.extensions.surfaceColor
+import dev.icarapovic.music.extensions.accentColor
+import dev.icarapovic.music.extensions.surfaceColor
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.util.MusicUtil
 import code.name.monkey.retromusic.util.ThemedFastScroller

@@ -65,7 +65,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <code.name.monkey.retromusic.views.RetroShapeableImageView
+            <dev.icarapovic.music.ui.views.RetroShapeableImageView
                 android:id="@+id/artistImage"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
@@ -77,7 +77,7 @@
                 app:retroCornerSize="26dp"
                 tools:srcCompat="@tools:sample/backgrounds/scenic[11]" />
 
-            <code.name.monkey.retromusic.views.BaselineGridTextView
+            <dev.icarapovic.music.ui.views.BaselineGridTextView
                 android:id="@+id/albumTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 tools:ignore="MissingPrefix"
                 tools:text="@tools:sample/full_names" />
 
-            <code.name.monkey.retromusic.views.BaselineGridTextView
+            <dev.icarapovic.music.ui.views.BaselineGridTextView
                 android:id="@+id/albumText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

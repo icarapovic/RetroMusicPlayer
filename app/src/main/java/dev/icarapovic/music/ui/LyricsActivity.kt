@@ -23,7 +23,7 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsMusicServiceActivity
-import code.name.monkey.retromusic.extensions.surfaceColor
+import dev.icarapovic.music.extensions.surfaceColor
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper
 import code.name.monkey.retromusic.lyrics.LrcView

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="4dp">
 
-    <code.name.monkey.retromusic.views.RetroShapeableImageView
+    <dev.icarapovic.music.ui.views.RetroShapeableImageView
         android:id="@+id/image"
         android:layout_width="144dp"
         android:layout_height="144dp"

@@ -29,8 +29,8 @@ import code.name.monkey.retromusic.Constants.USER_BANNER
 import code.name.monkey.retromusic.Constants.USER_PROFILE
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsBaseActivity
-import code.name.monkey.retromusic.extensions.accentColor
-import code.name.monkey.retromusic.extensions.applyToolbar
+import dev.icarapovic.music.extensions.accentColor
+import dev.icarapovic.music.extensions.applyToolbar
 import code.name.monkey.retromusic.glide.ProfileBannerGlideRequest
 import code.name.monkey.retromusic.glide.UserProfileGlideRequest
 import code.name.monkey.retromusic.util.ImageUtil

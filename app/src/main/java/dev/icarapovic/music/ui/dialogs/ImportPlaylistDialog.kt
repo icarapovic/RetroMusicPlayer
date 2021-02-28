@@ -18,8 +18,8 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.materialDialog
 import dev.icarapovic.music.ui.fragments.LibraryViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

@@ -34,8 +34,8 @@ import dev.icarapovic.music.data.db.PlaylistEntity
 import dev.icarapovic.music.data.db.PlaylistWithSongs
 import dev.icarapovic.music.data.db.SongEntity
 import dev.icarapovic.music.data.db.toSongs
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
 import code.name.monkey.retromusic.helper.menu.PlaylistMenuHelper
 import code.name.monkey.retromusic.helper.menu.SongsMenuHelper
 import code.name.monkey.retromusic.interfaces.ICabHolder

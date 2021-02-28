@@ -26,7 +26,7 @@ import android.widget.SeekBar
 import androidx.fragment.app.Fragment
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.applyColor
+import dev.icarapovic.music.extensions.applyColor
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.volume.AudioVolumeObserver

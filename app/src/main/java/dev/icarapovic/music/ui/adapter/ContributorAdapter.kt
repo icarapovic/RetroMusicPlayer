@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.model.Contributor
 import code.name.monkey.retromusic.util.RetroUtil.openUrl
-import code.name.monkey.retromusic.views.RetroShapeableImageView
+import dev.icarapovic.music.ui.views.RetroShapeableImageView
 import com.bumptech.glide.Glide
 
 class ContributorAdapter(

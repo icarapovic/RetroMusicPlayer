@@ -30,9 +30,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.addAccentColor
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.addAccentColor
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.materialDialog
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import dev.icarapovic.music.data.service.MusicService
 import dev.icarapovic.music.data.service.MusicService.ACTION_PENDING_QUIT

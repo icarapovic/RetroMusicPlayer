@@ -23,7 +23,7 @@ import android.view.WindowManager
 import androidx.core.view.ViewCompat
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsMusicServiceActivity
-import code.name.monkey.retromusic.extensions.whichFragment
+import dev.icarapovic.music.extensions.whichFragment
 import dev.icarapovic.music.ui.fragments.player.lockscreen.LockScreenControlsFragment
 import code.name.monkey.retromusic.glide.RetroMusicColoredTarget
 import code.name.monkey.retromusic.glide.SongGlideRequest

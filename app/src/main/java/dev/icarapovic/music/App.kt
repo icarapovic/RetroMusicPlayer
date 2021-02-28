@@ -19,7 +19,7 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import code.name.monkey.retromusic.appModules
-import code.name.monkey.retromusic.appshortcuts.DynamicShortcutManager
+import dev.icarapovic.music.ui.appshortcuts.DynamicShortcutManager
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

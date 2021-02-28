@@ -22,9 +22,9 @@ import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.base.AbsBaseActivity
-import code.name.monkey.retromusic.appshortcuts.DynamicShortcutManager
-import code.name.monkey.retromusic.extensions.applyToolbar
-import code.name.monkey.retromusic.extensions.findNavController
+import dev.icarapovic.music.ui.appshortcuts.DynamicShortcutManager
+import dev.icarapovic.music.extensions.applyToolbar
+import dev.icarapovic.music.extensions.findNavController
 import com.afollestad.materialdialogs.color.ColorChooserDialog
 import kotlinx.android.synthetic.main.activity_settings.*
 

@@ -28,7 +28,7 @@ import code.name.monkey.retromusic.R
 import dev.icarapovic.music.data.db.toPlayCount
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import dev.icarapovic.music.data.service.MusicService.*
 import java.lang.ref.WeakReference
 import java.util.*
@@ -39,7 +39,7 @@ import org.koin.android.ext.android.inject
 abstract class AbsMusicServiceActivity : AbsBaseActivity(), IMusicServiceEventListener {
 
     private val mMusicServiceEventListeners = ArrayList<IMusicServiceEventListener>()
-    private val repository: RealRepository by inject()
+    private val repository: RepositoryImpl by inject()
     private var serviceToken: MusicPlayerRemote.ServiceToken? = null
     private var musicStateReceiver: MusicStateReceiver? = null
     private var receiverRegistered: Boolean = false

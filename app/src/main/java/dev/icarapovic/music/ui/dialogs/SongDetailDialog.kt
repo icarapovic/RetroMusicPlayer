@@ -28,8 +28,8 @@ import androidx.core.text.HtmlCompat
 import androidx.fragment.app.DialogFragment
 import code.name.monkey.retromusic.EXTRA_SONG
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.materialDialog
 import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.util.MusicUtil
 import java.io.File

@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleContainer"
         tools:text="@tools:sample/lorem/random" />
 
-    <code.name.monkey.retromusic.views.SeekArc
+    <dev.icarapovic.music.ui.views.SeekArc
         android:id="@+id/volumeSeekBar"
         android:layout_width="match_parent"
         android:layout_height="300dp"

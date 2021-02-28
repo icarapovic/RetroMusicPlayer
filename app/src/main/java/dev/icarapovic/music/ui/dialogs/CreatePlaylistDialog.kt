@@ -22,9 +22,9 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import code.name.monkey.retromusic.EXTRA_SONG
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.colorButtons
-import code.name.monkey.retromusic.extensions.extra
-import code.name.monkey.retromusic.extensions.materialDialog
+import dev.icarapovic.music.extensions.colorButtons
+import dev.icarapovic.music.extensions.extra
+import dev.icarapovic.music.extensions.materialDialog
 import dev.icarapovic.music.ui.fragments.LibraryViewModel
 import dev.icarapovic.music.domain.model.Song
 import com.google.android.material.textfield.TextInputEditText

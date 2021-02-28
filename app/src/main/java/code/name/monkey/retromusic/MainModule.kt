@@ -17,8 +17,9 @@ import dev.icarapovic.music.data.network.provideDefaultCache
 import dev.icarapovic.music.data.network.provideLastFmRest
 import dev.icarapovic.music.data.network.provideLastFmRetrofit
 import dev.icarapovic.music.data.network.provideOkHttp
-import code.name.monkey.retromusic.repository.*
+import dev.icarapovic.music.data.repository.*
 import code.name.monkey.retromusic.util.FilePathUtil
+import dev.icarapovic.music.domain.repository.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -82,7 +83,7 @@ private val roomModule = module {
     }
 
     single {
-        RealRoomRepository(get(), get(), get(), get(), get())
+        RoomRepositoryImpl(get(), get(), get(), get(), get())
     } bind RoomRepository::class
 }
 private val mainModule = module {
@@ -92,7 +93,7 @@ private val mainModule = module {
 }
 private val dataModule = module {
     single {
-        RealRepository(
+        RepositoryImpl(
             get(),
             get(),
             get(),
@@ -109,31 +110,31 @@ private val dataModule = module {
     } bind Repository::class
 
     single {
-        RealSongRepository(get())
+        SongRepositoryImpl(get())
     } bind SongRepository::class
 
     single {
-        RealGenreRepository(get(), get())
+        GenreRepositoryImpl(get(), get())
     } bind GenreRepository::class
 
     single {
-        RealAlbumRepository(get())
+        AlbumRepositoryImpl(get())
     } bind AlbumRepository::class
 
     single {
-        RealArtistRepository(get(), get())
+        ArtistRepositoryImpl(get(), get())
     } bind ArtistRepository::class
 
     single {
-        RealPlaylistRepository(get())
+        PlaylistRepositoryImpl(get())
     } bind PlaylistRepository::class
 
     single {
-        RealTopPlayedRepository(get(), get(), get(), get())
-    } bind TopPlayedRepository::class
+        MostPlayedRepositoryImpl(get(), get(), get(), get())
+    } bind MostPlayedRepository::class
 
     single {
-        RealLastAddedRepository(
+        LastAddedRepositoryImpl(
             get(),
             get(),
             get()
@@ -141,7 +142,7 @@ private val dataModule = module {
     } bind LastAddedRepository::class
 
     single {
-        RealSearchRepository(
+        SearchRepositoryImpl(
             get(),
             get(),
             get(),
@@ -150,7 +151,7 @@ private val dataModule = module {
         )
     }
     single {
-        RealLocalDataRepository(get())
+        LocalDataRepositoryImpl(get())
     } bind LocalDataRepository::class
 }
 

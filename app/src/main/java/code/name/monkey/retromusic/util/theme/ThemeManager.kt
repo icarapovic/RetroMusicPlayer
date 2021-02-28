@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatDelegate
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.generalThemeValue
+import dev.icarapovic.music.extensions.generalThemeValue
 import code.name.monkey.retromusic.util.theme.ThemeMode.*
 
 object ThemeManager {

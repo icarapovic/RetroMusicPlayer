@@ -20,7 +20,7 @@ import dev.icarapovic.music.ui.dialogs.AddToPlaylistDialog
 import dev.icarapovic.music.ui.dialogs.DeleteSongsDialog
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,7 +45,7 @@ object SongsMenuHelper : KoinComponent {
             }
             R.id.action_add_to_playlist -> {
                 CoroutineScope(Dispatchers.IO).launch {
-                    val playlists = get<RealRepository>().fetchPlaylists()
+                    val playlists = get<RepositoryImpl>().fetchPlaylists()
                     withContext(Dispatchers.Main) {
                         AddToPlaylistDialog.create(playlists, songs)
                             .show(activity.supportFragmentManager, "ADD_PLAYLIST")

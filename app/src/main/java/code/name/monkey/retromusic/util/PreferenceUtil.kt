@@ -8,8 +8,8 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import androidx.viewpager.widget.ViewPager
 import code.name.monkey.retromusic.*
-import code.name.monkey.retromusic.extensions.getIntRes
-import code.name.monkey.retromusic.extensions.getStringOrDefault
+import dev.icarapovic.music.extensions.getIntRes
+import dev.icarapovic.music.extensions.getStringOrDefault
 import dev.icarapovic.music.ui.fragments.AlbumCoverStyle
 import dev.icarapovic.music.ui.fragments.NowPlayingScreen
 import dev.icarapovic.music.ui.fragments.folder.FoldersFragment

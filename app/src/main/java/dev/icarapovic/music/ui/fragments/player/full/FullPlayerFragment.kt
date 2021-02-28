@@ -26,9 +26,9 @@ import androidx.navigation.fragment.findNavController
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.EXTRA_ARTIST_ID
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
-import code.name.monkey.retromusic.extensions.whichFragment
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
+import dev.icarapovic.music.extensions.whichFragment
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerFragment
 import dev.icarapovic.music.ui.fragments.player.PlayerAlbumCoverFragment
 import code.name.monkey.retromusic.glide.ArtistGlideRequest

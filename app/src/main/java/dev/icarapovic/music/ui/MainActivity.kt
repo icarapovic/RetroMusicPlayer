@@ -50,13 +50,13 @@ import code.name.monkey.retromusic.TOGGLE_SEPARATE_LINE
 import code.name.monkey.retromusic.TOGGLE_VOLUME
 import code.name.monkey.retromusic.USER_NAME
 import dev.icarapovic.music.ui.base.AbsSlidingMusicPanelActivity
-import code.name.monkey.retromusic.extensions.extra
-import code.name.monkey.retromusic.extensions.findNavController
+import dev.icarapovic.music.extensions.extra
+import dev.icarapovic.music.extensions.findNavController
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.SearchQueryHelper.getSongs
 import code.name.monkey.retromusic.model.CategoryInfo
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.PlaylistSongsLoader
+import dev.icarapovic.music.data.repository.PlaylistSongsLoader
 import dev.icarapovic.music.data.service.MusicService
 import code.name.monkey.retromusic.util.AppRater
 import code.name.monkey.retromusic.util.PreferenceUtil

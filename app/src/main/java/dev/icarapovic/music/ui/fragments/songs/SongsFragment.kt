@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.song.ShuffleButtonSongAdapter
 import dev.icarapovic.music.ui.adapter.song.SongAdapter
-import code.name.monkey.retromusic.extensions.surfaceColor
+import dev.icarapovic.music.extensions.surfaceColor
 import dev.icarapovic.music.ui.fragments.ReloadType
 import dev.icarapovic.music.ui.fragments.base.AbsRecyclerViewCustomGridSizeFragment
 import code.name.monkey.retromusic.helper.SortOrder.SongSortOrder

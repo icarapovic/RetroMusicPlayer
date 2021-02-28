@@ -2,7 +2,7 @@ package dev.icarapovic.music.domain.model
 
 import android.content.Context
 import android.os.Parcelable
-import code.name.monkey.retromusic.repository.RealPlaylistRepository
+import dev.icarapovic.music.data.repository.PlaylistRepositoryImpl
 import code.name.monkey.retromusic.util.MusicUtil
 import kotlinx.android.parcel.Parcelize
 import org.koin.core.component.KoinComponent
@@ -20,7 +20,7 @@ open class Playlist(
 
     // this default implementation covers static playlists
     fun getSongs(): List<Song> {
-        return RealPlaylistRepository(get()).playlistSongs(id)
+        return PlaylistRepositoryImpl(get()).playlistSongs(id)
     }
 
     open fun getInfoString(context: Context): String {

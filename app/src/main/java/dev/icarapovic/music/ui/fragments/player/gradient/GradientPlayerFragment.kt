@@ -38,9 +38,9 @@ import dev.icarapovic.music.ui.adapter.song.PlayingQueueAdapter
 import dev.icarapovic.music.data.db.PlaylistEntity
 import dev.icarapovic.music.data.db.SongEntity
 import dev.icarapovic.music.data.db.toSongEntity
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.ripAlpha
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.ripAlpha
+import dev.icarapovic.music.extensions.show
 import dev.icarapovic.music.ui.fragments.VolumeFragment
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerControlsFragment
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerFragment

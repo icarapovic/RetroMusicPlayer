@@ -28,8 +28,8 @@ import code.name.monkey.retromusic.EXTRA_ALBUM_ID
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.base.AbsMultiSelectAdapter
 import dev.icarapovic.music.ui.adapter.base.MediaEntryViewHolder
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
 import code.name.monkey.retromusic.glide.RetroMusicColoredTarget
 import code.name.monkey.retromusic.glide.SongGlideRequest
 import code.name.monkey.retromusic.helper.MusicPlayerRemote

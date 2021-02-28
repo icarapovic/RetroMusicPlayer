@@ -1,8 +1,8 @@
 package code.name.monkey.retromusic.model
 
-import code.name.monkey.retromusic.repository.LastAddedRepository
-import code.name.monkey.retromusic.repository.SongRepository
-import code.name.monkey.retromusic.repository.TopPlayedRepository
+import dev.icarapovic.music.domain.repository.LastAddedRepository
+import dev.icarapovic.music.domain.repository.SongRepository
+import dev.icarapovic.music.domain.repository.MostPlayedRepository
 import dev.icarapovic.music.domain.model.Playlist
 import dev.icarapovic.music.domain.model.Song
 import org.koin.core.component.KoinApiExtension
@@ -19,7 +19,7 @@ abstract class AbsCustomPlaylist(
 
     protected val songRepository by inject<SongRepository>()
 
-    protected val topPlayedRepository by inject<TopPlayedRepository>()
+    protected val topPlayedRepository by inject<MostPlayedRepository>()
 
     protected val lastAddedRepository by inject<LastAddedRepository>()
 }

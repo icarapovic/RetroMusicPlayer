@@ -121,7 +121,7 @@
         <activity android:name="dev.icarapovic.music.ui.LockScreenActivity" />
 
         <activity
-            android:name=".appshortcuts.AppShortcutLauncherActivity"
+            android:name="dev.icarapovic.music.ui.appshortcuts.AppShortcutLauncherActivity"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
@@ -156,7 +156,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".appwidgets.BootReceiver">
+        <receiver android:name="dev.icarapovic.music.ui.appwidgets.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -164,7 +164,7 @@
         </receiver>
 
         <receiver
-            android:name=".appwidgets.AppWidgetBig"
+            android:name="dev.icarapovic.music.ui.appwidgets.AppWidgetBig"
             android:exported="false"
             android:label="@string/app_widget_big_name">
             <intent-filter>
@@ -177,7 +177,7 @@
         </receiver>
 
         <receiver
-            android:name=".appwidgets.AppWidgetClassic"
+            android:name="dev.icarapovic.music.ui.appwidgets.AppWidgetClassic"
             android:exported="false"
             android:label="@string/app_widget_classic_name">
             <intent-filter>
@@ -189,7 +189,7 @@
                 android:resource="@xml/app_widget_classic_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetSmall"
+            android:name="dev.icarapovic.music.ui.appwidgets.AppWidgetSmall"
             android:exported="false"
             android:label="@string/app_widget_small_name">
             <intent-filter>
@@ -201,7 +201,7 @@
                 android:resource="@xml/app_widget_small_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetText"
+            android:name="dev.icarapovic.music.ui.appwidgets.AppWidgetText"
             android:exported="false"
             android:label="@string/app_widget_text_name">
             <intent-filter>
@@ -213,7 +213,7 @@
                 android:resource="@xml/app_widget_text" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetCard"
+            android:name="dev.icarapovic.music.ui.appwidgets.AppWidgetCard"
             android:exported="false"
             android:label="@string/app_widget_card_name">
             <intent-filter>

@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import code.name.monkey.retromusic.EXTRA_ALBUM_ID
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.album.AlbumAdapter
-import code.name.monkey.retromusic.extensions.surfaceColor
+import dev.icarapovic.music.extensions.surfaceColor
 import dev.icarapovic.music.ui.fragments.ReloadType
 import dev.icarapovic.music.ui.fragments.base.AbsRecyclerViewCustomGridSizeFragment
 import code.name.monkey.retromusic.helper.SortOrder.AlbumSortOrder

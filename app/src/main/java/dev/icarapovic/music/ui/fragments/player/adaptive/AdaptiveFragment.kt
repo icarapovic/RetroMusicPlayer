@@ -20,9 +20,9 @@ import androidx.appcompat.widget.Toolbar
 import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.surfaceColor
-import code.name.monkey.retromusic.extensions.textColorPrimary
-import code.name.monkey.retromusic.extensions.textColorSecondary
+import dev.icarapovic.music.extensions.surfaceColor
+import dev.icarapovic.music.extensions.textColorPrimary
+import dev.icarapovic.music.extensions.textColorSecondary
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerFragment
 import dev.icarapovic.music.ui.fragments.player.PlayerAlbumCoverFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote

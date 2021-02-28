@@ -29,7 +29,7 @@ import dev.icarapovic.music.ui.adapter.artist.ArtistAdapter
 import dev.icarapovic.music.ui.adapter.song.ShuffleButtonSongAdapter
 import dev.icarapovic.music.ui.adapter.song.SongAdapter
 import dev.icarapovic.music.data.db.toSong
-import code.name.monkey.retromusic.extensions.dipToPix
+import dev.icarapovic.music.extensions.dipToPix
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import code.name.monkey.retromusic.interfaces.IAlbumClickListener
 import code.name.monkey.retromusic.interfaces.IArtistClickListener

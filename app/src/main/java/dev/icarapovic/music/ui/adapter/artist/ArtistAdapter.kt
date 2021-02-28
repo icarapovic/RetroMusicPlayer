@@ -25,7 +25,7 @@ import androidx.fragment.app.FragmentActivity
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.base.AbsMultiSelectAdapter
 import dev.icarapovic.music.ui.adapter.base.MediaEntryViewHolder
-import code.name.monkey.retromusic.extensions.hide
+import dev.icarapovic.music.extensions.hide
 import code.name.monkey.retromusic.glide.ArtistGlideRequest
 import code.name.monkey.retromusic.glide.RetroMusicColoredTarget
 import code.name.monkey.retromusic.helper.menu.SongsMenuHelper

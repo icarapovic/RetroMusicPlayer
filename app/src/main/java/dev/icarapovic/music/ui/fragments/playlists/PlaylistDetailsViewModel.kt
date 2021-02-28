@@ -21,10 +21,10 @@ import dev.icarapovic.music.data.db.PlaylistWithSongs
 import dev.icarapovic.music.data.db.SongEntity
 import code.name.monkey.retromusic.interfaces.IMusicServiceEventListener
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 
 class PlaylistDetailsViewModel(
-    private val realRepository: RealRepository,
+    private val realRepository: RepositoryImpl,
     private var playlist: PlaylistWithSongs
 ) : ViewModel(), IMusicServiceEventListener {
 

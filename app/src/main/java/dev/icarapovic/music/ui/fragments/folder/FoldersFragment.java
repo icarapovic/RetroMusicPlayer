@@ -81,8 +81,8 @@ import code.name.monkey.retromusic.util.FileUtil;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 import code.name.monkey.retromusic.util.RetroColorUtil;
 import code.name.monkey.retromusic.util.ThemedFastScroller;
-import code.name.monkey.retromusic.views.BreadCrumbLayout;
-import code.name.monkey.retromusic.views.ScrollingViewOnApplyWindowInsetsListener;
+import dev.icarapovic.music.ui.views.BreadCrumbLayout;
+import dev.icarapovic.music.ui.views.ScrollingViewOnApplyWindowInsetsListener;
 import me.zhanghai.android.fastscroll.FastScroller;
 
 import static code.name.monkey.appthemehelper.common.ATHToolbarActivity.getToolbarBackgroundColor;

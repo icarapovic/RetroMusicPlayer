@@ -27,8 +27,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.song.SongAdapter
-import code.name.monkey.retromusic.extensions.dipToPix
-import code.name.monkey.retromusic.extensions.resolveColor
+import dev.icarapovic.music.extensions.dipToPix
+import dev.icarapovic.music.extensions.resolveColor
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import code.name.monkey.retromusic.helper.menu.GenreMenuHelper
 import dev.icarapovic.music.domain.model.Genre

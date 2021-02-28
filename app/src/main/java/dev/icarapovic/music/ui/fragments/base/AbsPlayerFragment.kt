@@ -39,15 +39,15 @@ import dev.icarapovic.music.data.db.PlaylistEntity
 import dev.icarapovic.music.data.db.SongEntity
 import dev.icarapovic.music.data.db.toSongEntity
 import dev.icarapovic.music.ui.dialogs.*
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.whichFragment
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.whichFragment
 import dev.icarapovic.music.ui.fragments.ReloadType
 import dev.icarapovic.music.ui.fragments.player.PlayerAlbumCoverFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IPaletteColorHolder
 import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.model.lyrics.Lyrics
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import dev.icarapovic.music.data.service.MusicService
 import code.name.monkey.retromusic.util.*
 import kotlinx.android.synthetic.main.shadow_statusbar_toolbar.*
@@ -86,7 +86,7 @@ abstract class AbsPlayerFragment(@LayoutRes layout: Int) : AbsMainActivityFragme
             }
             R.id.action_add_to_playlist -> {
                 lifecycleScope.launch(IO) {
-                    val playlists = get<RealRepository>().fetchPlaylists()
+                    val playlists = get<RepositoryImpl>().fetchPlaylists()
                     withContext(Main) {
                         AddToPlaylistDialog.create(playlists, song)
                             .show(childFragmentManager, "ADD_PLAYLIST")

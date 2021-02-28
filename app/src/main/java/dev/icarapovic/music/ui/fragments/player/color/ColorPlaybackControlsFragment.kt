@@ -27,9 +27,9 @@ import android.widget.SeekBar
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.TintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.applyColor
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.applyColor
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerControlsFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper

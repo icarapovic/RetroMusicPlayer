@@ -32,7 +32,7 @@ import dev.icarapovic.music.ui.dialogs.SongDetailDialog
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.interfaces.IPaletteColorHolder
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import code.name.monkey.retromusic.util.MusicUtil
 import code.name.monkey.retromusic.util.RingtoneManager
 import kotlinx.coroutines.CoroutineScope
@@ -73,7 +73,7 @@ object SongMenuHelper : KoinComponent {
             }
             R.id.action_add_to_playlist -> {
                 CoroutineScope(Dispatchers.IO).launch {
-                    val playlists = get<RealRepository>().fetchPlaylists()
+                    val playlists = get<RepositoryImpl>().fetchPlaylists()
                     withContext(Dispatchers.Main) {
                         AddToPlaylistDialog.create(playlists, song)
                             .show(activity.supportFragmentManager, "ADD_PLAYLIST")

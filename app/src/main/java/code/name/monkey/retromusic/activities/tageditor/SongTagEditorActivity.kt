@@ -21,8 +21,8 @@ import android.text.TextWatcher
 import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.MaterialUtil
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.appHandleColor
-import code.name.monkey.retromusic.repository.SongRepository
+import dev.icarapovic.music.extensions.appHandleColor
+import dev.icarapovic.music.domain.repository.SongRepository
 import dev.icarapovic.music.ui.base.AbsTagEditorActivity
 import kotlinx.android.synthetic.main.activity_song_tag_editor.*
 import org.jaudiotagger.tag.FieldKey

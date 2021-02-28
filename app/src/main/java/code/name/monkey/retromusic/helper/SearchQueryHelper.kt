@@ -17,8 +17,8 @@ package code.name.monkey.retromusic.helper
 import android.app.SearchManager
 import android.os.Bundle
 import android.provider.MediaStore
+import dev.icarapovic.music.data.repository.SongRepositoryImpl
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.repository.RealSongRepository
 import org.koin.core.component.KoinApiExtension
 import java.util.*
 import org.koin.core.component.KoinComponent
@@ -30,7 +30,7 @@ object SearchQueryHelper : KoinComponent {
     private const val ALBUM_SELECTION = "lower(" + MediaStore.Audio.AudioColumns.ALBUM + ") = ?"
     private const val ARTIST_SELECTION = "lower(" + MediaStore.Audio.AudioColumns.ARTIST + ") = ?"
     private const val AND = " AND "
-    private val songRepository by inject<RealSongRepository>()
+    private val songRepository by inject<SongRepositoryImpl>()
     var songs = ArrayList<Song>()
 
     @JvmStatic

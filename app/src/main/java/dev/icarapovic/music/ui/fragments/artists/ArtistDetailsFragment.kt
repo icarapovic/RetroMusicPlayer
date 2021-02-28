@@ -38,7 +38,7 @@ import code.name.monkey.retromusic.R
 import dev.icarapovic.music.ui.adapter.album.HorizontalAlbumAdapter
 import dev.icarapovic.music.ui.adapter.song.SimpleSongAdapter
 import dev.icarapovic.music.ui.dialogs.AddToPlaylistDialog
-import code.name.monkey.retromusic.extensions.*
+import dev.icarapovic.music.extensions.*
 import dev.icarapovic.music.ui.fragments.base.AbsMainActivityFragment
 import code.name.monkey.retromusic.glide.ArtistGlideRequest
 import code.name.monkey.retromusic.glide.SingleColorTarget
@@ -47,7 +47,7 @@ import code.name.monkey.retromusic.interfaces.IAlbumClickListener
 import dev.icarapovic.music.domain.model.Artist
 import dev.icarapovic.music.data.network.Result
 import dev.icarapovic.music.data.network.model.LastFmArtist
-import code.name.monkey.retromusic.repository.RealRepository
+import dev.icarapovic.music.data.repository.RepositoryImpl
 import code.name.monkey.retromusic.util.CustomArtistImageUtil
 import code.name.monkey.retromusic.util.MusicUtil
 import code.name.monkey.retromusic.util.RetroUtil
@@ -256,7 +256,7 @@ class ArtistDetailsFragment : AbsMainActivityFragment(R.layout.fragment_artist_d
             }
             R.id.action_add_to_playlist -> {
                 lifecycleScope.launch(Dispatchers.IO) {
-                    val playlists = get<RealRepository>().fetchPlaylists()
+                    val playlists = get<RepositoryImpl>().fetchPlaylists()
                     withContext(Dispatchers.Main) {
                         AddToPlaylistDialog.create(playlists, songs)
                             .show(childFragmentManager, "ADD_PLAYLIST")

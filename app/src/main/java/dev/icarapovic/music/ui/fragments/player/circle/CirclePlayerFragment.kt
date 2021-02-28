@@ -32,10 +32,10 @@ import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.TintHelper
 import code.name.monkey.appthemehelper.util.ToolbarContentTintHelper
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.extensions.accentColor
-import code.name.monkey.retromusic.extensions.applyColor
-import code.name.monkey.retromusic.extensions.hide
-import code.name.monkey.retromusic.extensions.show
+import dev.icarapovic.music.extensions.accentColor
+import dev.icarapovic.music.extensions.applyColor
+import dev.icarapovic.music.extensions.hide
+import dev.icarapovic.music.extensions.show
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerControlsFragment
 import dev.icarapovic.music.ui.fragments.base.AbsPlayerFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
@@ -47,8 +47,8 @@ import code.name.monkey.retromusic.util.MusicUtil
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.ViewUtil
 import code.name.monkey.retromusic.util.color.MediaNotificationProcessor
-import code.name.monkey.retromusic.views.SeekArc
-import code.name.monkey.retromusic.views.SeekArc.OnSeekArcChangeListener
+import dev.icarapovic.music.ui.views.SeekArc
+import dev.icarapovic.music.ui.views.SeekArc.OnSeekArcChangeListener
 import code.name.monkey.retromusic.volume.AudioVolumeObserver
 import code.name.monkey.retromusic.volume.OnAudioVolumeChangedListener
 import kotlinx.android.synthetic.main.fragment_circle_player.*
