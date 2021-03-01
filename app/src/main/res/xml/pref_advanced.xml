@@ -59,16 +59,5 @@
             android:title="@string/pref_keep_screen_on_title"
             app:icon="@drawable/ic_settings_brigntness" />
 
-
     </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
-    <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEListPreference
-        android:defaultValue="auto"
-        android:entries="@array/pref_language_names"
-        android:entryValues="@array/pref_language_codes"
-        android:key="language_name"
-        android:layout="@layout/list_item_view"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/pref_language_name"
-        app:icon="@drawable/ic_language" />
 </androidx.preference.PreferenceScreen>

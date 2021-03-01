@@ -55,24 +55,6 @@ fun EditText.appHandleColor(): EditText {
     return this
 }
 
-fun View.translateYAnimate(value: Float) {
-    ObjectAnimator.ofFloat(this, "translationY", value)
-        .apply {
-            duration = 300
-            doOnStart {
-                if (value == 0f) {
-                    show()
-                }
-            }
-            doOnEnd {
-                if (value != 0f) {
-                    hide()
-                }
-            }
-            start()
-        }
-}
-
 fun BottomSheetBehavior<*>.peekHeightAnimate(value: Int) {
     ObjectAnimator.ofInt(this, "peekHeight", value)
         .apply {
@@ -114,12 +96,5 @@ fun View.focusAndShowKeyboard() {
                     }
                 }
             })
-    }
-}
-
-fun ShapeableImageView.setCircleShape(boolean: Boolean) {
-    addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ ->
-        val radius = width / 2f
-        shapeAppearanceModel = ShapeAppearanceModel().withCornerSize(radius)
     }
 }
