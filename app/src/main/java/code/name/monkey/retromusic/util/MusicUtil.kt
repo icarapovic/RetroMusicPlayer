@@ -36,6 +36,7 @@ import org.jaudiotagger.tag.FieldKey
 import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
+import org.koin.core.component.inject
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -44,6 +45,9 @@ import java.util.regex.Pattern
 
 @KoinApiExtension
 object MusicUtil : KoinComponent {
+
+    val songRepository: SongRepository by inject()
+
     fun createShareSongFileIntent(song: Song, context: Context): Intent? {
         return try {
             Intent().setAction(Intent.ACTION_SEND).putExtra(
@@ -467,7 +471,7 @@ object MusicUtil : KoinComponent {
                 cursor.moveToFirst()
                 while (!cursor.isAfterLast) {
                     val id = cursor.getLong(BaseColumns._ID)
-                    val song: Song = SongRepositoryImpl(context).song(id)
+                    val song: Song = songRepository.song(id)
                     removeFromQueue(song)
                     cursor.moveToNext()
                 }
