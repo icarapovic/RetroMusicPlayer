@@ -28,7 +28,6 @@ import dev.icarapovic.music.ui.LicenseActivity;
 import dev.icarapovic.music.ui.LyricsActivity;
 import dev.icarapovic.music.ui.PlayingQueueActivity;
 import dev.icarapovic.music.ui.UserInfoActivity;
-import dev.icarapovic.music.ui.WhatsNewActivity;
 import code.name.monkey.retromusic.activities.bugreport.BugReportActivity;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import org.jetbrains.annotations.NotNull;
@@ -61,10 +60,6 @@ public class NavigationUtil {
 
   public static void gotoDriveMode(@NotNull final Activity activity) {
     ActivityCompat.startActivity(activity, new Intent(activity, DriveModeActivity.class), null);
-  }
-
-  public static void gotoWhatNews(@NonNull Activity activity) {
-    ActivityCompat.startActivity(activity, new Intent(activity, WhatsNewActivity.class), null);
   }
 
   public static void openEqualizer(@NonNull final Activity activity) {

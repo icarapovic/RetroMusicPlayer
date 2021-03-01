@@ -113,7 +113,6 @@
         <activity android:name="dev.icarapovic.music.ui.LyricsActivity" />
         <activity android:name="dev.icarapovic.music.ui.UserInfoActivity" />
         <activity android:name="dev.icarapovic.music.ui.LicenseActivity" />
-        <activity android:name="dev.icarapovic.music.ui.WhatsNewActivity" />
         <activity android:name=".activities.bugreport.BugReportActivity" />
         <activity android:name="dev.icarapovic.music.ui.ShareInstagramStory" />
         <activity android:name="dev.icarapovic.music.ui.DriveModeActivity" />

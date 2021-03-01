@@ -23,6 +23,7 @@ import code.name.monkey.retromusic.glide.palette.BitmapPaletteTarget
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper
 import code.name.monkey.retromusic.util.color.MediaNotificationProcessor
 import com.bumptech.glide.request.animation.GlideAnimation
+import org.koin.core.context.GlobalContext.get
 
 abstract class RetroMusicColoredTarget(view: ImageView) : BitmapPaletteTarget(view) {
 
