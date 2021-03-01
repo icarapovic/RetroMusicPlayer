@@ -36,7 +36,7 @@ import kotlinx.coroutines.flow.flow
 class RepositoryImpl(
     private val context: Context,
     private val lastFMService: LastFMService,
-    private val songRepository: SongRepositoryImpl,
+    private val songRepository: SongRepository,
     private val albumRepository: AlbumRepository,
     private val artistRepository: ArtistRepository,
     private val genreRepository: GenreRepository,

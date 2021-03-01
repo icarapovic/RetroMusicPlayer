@@ -21,7 +21,7 @@ import dev.icarapovic.music.domain.repository.*
 import java.util.*
 
 class SearchRepositoryImpl(
-    private val songRepository: SongRepositoryImpl,
+    private val songRepository: SongRepository,
     private val albumRepository: AlbumRepository,
     private val artistRepository: ArtistRepository,
     private val roomRepository: RoomRepository,

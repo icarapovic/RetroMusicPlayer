@@ -40,8 +40,14 @@ import java.util.List;
 import dev.icarapovic.music.data.repository.SongRepositoryImpl;
 import dev.icarapovic.music.data.repository.SortedCursor;
 import dev.icarapovic.music.domain.model.Song;
+import dev.icarapovic.music.domain.repository.SongRepository;
+import kotlin.Lazy;
+
+import static org.koin.java.KoinJavaComponent.inject;
 
 public final class FileUtil {
+
+    private static Lazy<SongRepositoryImpl> songRepository = inject(SongRepositoryImpl.class);
 
     private FileUtil() {
     }
@@ -73,7 +79,7 @@ public final class FileUtil {
     }
 
     @Nullable
-    public static SortedCursor makeSongCursor(
+    private static SortedCursor makeSongCursor(
             @NonNull final Context context, @Nullable final List<File> files) {
         String selection = null;
         String[] paths = null;
@@ -88,8 +94,7 @@ public final class FileUtil {
             }
         }
 
-        Cursor songCursor =
-                new SongRepositoryImpl(context).makeSongCursor(selection, selection == null ? null : paths);
+        Cursor songCursor = songRepository.getValue().makeSongCursor(selection, selection == null ? null : paths);
 
         return songCursor == null
                 ? null
