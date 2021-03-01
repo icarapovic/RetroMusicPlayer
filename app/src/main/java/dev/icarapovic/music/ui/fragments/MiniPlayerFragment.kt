@@ -26,17 +26,13 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import code.name.monkey.retromusic.R
-import dev.icarapovic.music.extensions.accentColor
-import dev.icarapovic.music.extensions.applyColor
-import dev.icarapovic.music.extensions.show
-import dev.icarapovic.music.extensions.textColorPrimary
-import dev.icarapovic.music.extensions.textColorSecondary
 import dev.icarapovic.music.ui.fragments.base.AbsMusicServiceFragment
 import code.name.monkey.retromusic.helper.MusicPlayerRemote
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper
 import code.name.monkey.retromusic.helper.PlayPauseButtonOnClickHandler
 import code.name.monkey.retromusic.util.PreferenceUtil
 import code.name.monkey.retromusic.util.RetroUtil
+import dev.icarapovic.music.extensions.*
 import kotlin.math.abs
 import kotlinx.android.synthetic.main.fragment_mini_player.*
 
@@ -62,7 +58,7 @@ open class MiniPlayerFragment : AbsMusicServiceFragment(R.layout.fragment_mini_p
         view.setOnTouchListener(FlingPlayBackController(requireContext()))
         setUpMiniPlayer()
 
-        if (RetroUtil.isTablet()) {
+        if (requireContext().isTablet()) {
             actionNext.show()
             actionPrevious.show()
             actionNext?.show()

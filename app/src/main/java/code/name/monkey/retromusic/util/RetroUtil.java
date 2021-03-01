@@ -41,20 +41,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 import code.name.monkey.appthemehelper.util.TintHelper;
-import dev.icarapovic.music.App;
 import java.text.DecimalFormat;
 
 public class RetroUtil {
-
-  private static final int[] TEMP_ARRAY = new int[1];
-
-  private static final String SHOW_NAV_BAR_RES_NAME = "config_showNavigationBar";
-
-  public static int calculateNoOfColumns(@NonNull Context context) {
-    DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
-    float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
-    return (int) (dpWidth / 180);
-  }
 
   @NonNull
   public static Bitmap createBitmap(@NonNull Drawable drawable, float sizeMultiplier) {
@@ -94,18 +83,6 @@ public class RetroUtil {
       display.getSize(size);
     }
     return size;
-  }
-
-  public static int getStatusBarHeight() {
-    int result = 0;
-    int resourceId =
-        App.Companion.getContext()
-            .getResources()
-            .getIdentifier("status_bar_height", "dimen", "android");
-    if (resourceId > 0) {
-      result = App.Companion.getContext().getResources().getDimensionPixelSize(resourceId);
-    }
-    return result;
   }
 
   @Nullable
@@ -161,22 +138,6 @@ public class RetroUtil {
       default:
         return false;
     }
-  }
-
-  public static boolean isLandscape() {
-    return App.Companion.getContext().getResources().getConfiguration().orientation
-        == Configuration.ORIENTATION_LANDSCAPE;
-  }
-
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-  public static boolean isRTL(@NonNull Context context) {
-    Configuration config = context.getResources().getConfiguration();
-    return config.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
-  }
-
-  public static boolean isTablet() {
-    return App.Companion.getContext().getResources().getConfiguration().smallestScreenWidthDp
-        >= 600;
   }
 
   public static void openUrl(@NonNull Activity context, @NonNull String str) {

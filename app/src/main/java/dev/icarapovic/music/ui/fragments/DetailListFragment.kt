@@ -36,6 +36,8 @@ import code.name.monkey.retromusic.interfaces.IArtistClickListener
 import dev.icarapovic.music.domain.model.Album
 import dev.icarapovic.music.domain.model.Artist
 import code.name.monkey.retromusic.util.RetroUtil
+import dev.icarapovic.music.extensions.isLandscape
+import dev.icarapovic.music.extensions.isTablet
 import kotlinx.android.synthetic.main.fragment_playlist_detail.*
 
 class DetailListFragment : AbsMainActivityFragment(R.layout.fragment_playlist_detail),
@@ -174,8 +176,8 @@ class DetailListFragment : AbsMainActivityFragment(R.layout.fragment_playlist_de
         GridLayoutManager(requireContext(), gridCount(), GridLayoutManager.VERTICAL, false)
 
     private fun gridCount(): Int {
-        if (RetroUtil.isTablet()) {
-            return if (RetroUtil.isLandscape()) 6 else 4
+        if (requireContext().isTablet()) {
+            return if (requireContext().isLandscape()) 6 else 4
         }
         return 2
     }
