@@ -1,17 +1,3 @@
-/*
- * Copyright (c) 2019 Hemanth Savarala.
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by
- *  the Free Software Foundation either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package dev.icarapovic.music.data.repository
 
 import android.content.Context
@@ -21,23 +7,32 @@ import android.provider.MediaStore.Audio.AudioColumns
 import android.provider.MediaStore.Audio.Media
 import code.name.monkey.retromusic.Constants.IS_MUSIC
 import code.name.monkey.retromusic.Constants.baseProjection
+import code.name.monkey.retromusic.util.PreferenceUtil
+import dev.icarapovic.music.data.providers.BlacklistStore
+import dev.icarapovic.music.domain.model.Song
+import dev.icarapovic.music.domain.repository.SongRepository
 import dev.icarapovic.music.extensions.getInt
 import dev.icarapovic.music.extensions.getLong
 import dev.icarapovic.music.extensions.getString
 import dev.icarapovic.music.extensions.getStringOrNull
-import dev.icarapovic.music.domain.model.Song
-import dev.icarapovic.music.data.providers.BlacklistStore
-import code.name.monkey.retromusic.util.PreferenceUtil
-import dev.icarapovic.music.domain.repository.SongRepository
 import java.util.*
 
 class SongRepositoryImpl(private val context: Context) : SongRepository {
 
-    override fun songs(): List<Song> {
+    override fun getAllSongs(): List<Song> {
         return songs(makeSongCursor(null, null))
     }
 
-    override fun songs(cursor: Cursor?): List<Song> {
+    override fun getFilteredSongs(
+        selection: String?,
+        selectionArgs: Array<String>?,
+        sortOrder: String
+    ): List<Song> {
+        val cursor = makeSongCursor(selection, selectionArgs, sortOrder)
+        return songs(cursor)
+    }
+
+    private fun songs(cursor: Cursor?): List<Song> {
         val songs = arrayListOf<Song>()
         if (cursor != null && cursor.moveToFirst()) {
             do {

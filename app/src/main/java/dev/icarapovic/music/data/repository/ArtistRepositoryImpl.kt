@@ -1,27 +1,14 @@
-/*
- * Copyright (c) 2019 Hemanth Savarala.
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by
- *  the Free Software Foundation either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package dev.icarapovic.music.data.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
+import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.domain.model.Album
 import dev.icarapovic.music.domain.model.Artist
-import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.domain.repository.ArtistRepository
+import dev.icarapovic.music.domain.repository.SongRepository
 
 class ArtistRepositoryImpl(
-    private val songRepository: SongRepositoryImpl,
+    private val songRepository: SongRepository,
     private val albumRepository: AlbumRepositoryImpl
 ) : ArtistRepository {
 
@@ -30,58 +17,52 @@ class ArtistRepositoryImpl(
                 PreferenceUtil.artistAlbumSortOrder + ", " +
                 PreferenceUtil.artistSongSortOrder
     }
+
     override fun artist(artistId: Long): Artist {
         if (artistId == Artist.VARIOUS_ARTISTS_ID) {
             // Get Various Artists
-            val songs = songRepository.songs(
-                songRepository.makeSongCursor(
-                    null,
-                    null,
-                    getSongLoaderSortOrder()
-                )
+            val songs = songRepository.getFilteredSongs(
+                null,
+                null,
+                getSongLoaderSortOrder()
             )
-            val albums = albumRepository.splitIntoAlbums(songs).filter { it.albumArtist == Artist.VARIOUS_ARTISTS_DISPLAY_NAME }
+            val albums = albumRepository.splitIntoAlbums(songs)
+                .filter { it.albumArtist == Artist.VARIOUS_ARTISTS_DISPLAY_NAME }
             return Artist(Artist.VARIOUS_ARTISTS_ID, albums)
         }
 
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
-                AudioColumns.ARTIST_ID + "=?",
-                arrayOf(artistId.toString()),
-                getSongLoaderSortOrder()
-            )
+        val songs = songRepository.getFilteredSongs(
+            AudioColumns.ARTIST_ID + "=?",
+            arrayOf(artistId.toString()),
+            getSongLoaderSortOrder()
         )
         return Artist(artistId, albumRepository.splitIntoAlbums(songs))
     }
+
     override fun artists(): List<Artist> {
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
-                null, null,
-                getSongLoaderSortOrder()
-            )
+        val songs = songRepository.getFilteredSongs(
+            null, null,
+            getSongLoaderSortOrder()
+
         )
         return splitIntoArtists(albumRepository.splitIntoAlbums(songs))
     }
 
     override fun albumArtists(): List<Artist> {
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
-                null,
-                null,
-                getSongLoaderSortOrder()
-            )
+        val songs = songRepository.getFilteredSongs(
+            null,
+            null,
+            getSongLoaderSortOrder()
         )
 
         return splitIntoAlbumArtists(albumRepository.splitIntoAlbums(songs))
     }
 
     override fun artists(query: String): List<Artist> {
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
+        val songs = songRepository.getFilteredSongs(
                 AudioColumns.ARTIST + " LIKE ?",
                 arrayOf("%$query%"),
                 getSongLoaderSortOrder()
-            )
         )
         return splitIntoArtists(albumRepository.splitIntoAlbums(songs))
     }
@@ -102,7 +83,6 @@ class ArtistRepositoryImpl(
                 }
             }
     }
-
 
 
     fun splitIntoArtists(albums: List<Album>): List<Artist> {

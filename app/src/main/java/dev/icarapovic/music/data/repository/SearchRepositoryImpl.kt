@@ -41,7 +41,7 @@ class SearchRepositoryImpl(
                 results.addAll(artists)
             }
 
-            val albums = albumRepository.albums(searchString)
+            val albums = albumRepository.getAlbumsByName(searchString)
             if (albums.isNotEmpty()) {
                 results.add(context.resources.getString(R.string.albums))
                 results.addAll(albums)

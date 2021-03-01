@@ -1,58 +1,41 @@
-/*
- * Copyright (c) 2019 Hemanth Savarala.
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by
- *  the Free Software Foundation either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package dev.icarapovic.music.data.repository
 
 import android.provider.MediaStore.Audio.AudioColumns
 import code.name.monkey.retromusic.helper.SortOrder
+import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.domain.model.Album
 import dev.icarapovic.music.domain.model.Song
-import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.domain.repository.AlbumRepository
+import dev.icarapovic.music.domain.repository.SongRepository
 
-class AlbumRepositoryImpl(private val songRepository: SongRepositoryImpl) :
-    AlbumRepository {
+class AlbumRepositoryImpl(
+    private val songRepository: SongRepository
+) : AlbumRepository {
 
-    override fun albums(): List<Album> {
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
+    override fun getAllAlbums(): List<Album> {
+        val songs = songRepository.getFilteredSongs(
                 null,
                 null,
                 getSongLoaderSortOrder()
-            )
         )
         return splitIntoAlbums(songs)
     }
 
-    override fun albums(query: String): List<Album> {
-        val songs = songRepository.songs(
-            songRepository.makeSongCursor(
+    override fun getAlbumsByName(query: String): List<Album> {
+        val songs = songRepository.getFilteredSongs(
                 AudioColumns.ALBUM + " LIKE ?",
                 arrayOf("%$query%"),
                 getSongLoaderSortOrder()
-            )
         )
         return splitIntoAlbums(songs)
     }
 
-    override fun album(albumId: Long): Album {
-        val cursor = songRepository.makeSongCursor(
+    override fun getAlbumById(albumId: Long): Album {
+        val songs = songRepository.getFilteredSongs(
             AudioColumns.ALBUM_ID + "=?",
             arrayOf(albumId.toString()),
             getSongLoaderSortOrder()
         )
-        val songs = songRepository.songs(cursor)
         val album = Album(albumId, songs)
         sortAlbumSongs(album)
         return album

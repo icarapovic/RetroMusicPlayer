@@ -1,17 +1,3 @@
-/*
- * Copyright (c) 2019 Hemanth Savarala.
- *
- * Licensed under the GNU General Public License v3
- *
- * This is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by
- *  the Free Software Foundation either version 3 of the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- */
-
 package dev.icarapovic.music.data.repository
 
 import android.content.ContentResolver
@@ -29,10 +15,12 @@ import dev.icarapovic.music.domain.model.Genre
 import dev.icarapovic.music.domain.model.Song
 import code.name.monkey.retromusic.util.PreferenceUtil
 import dev.icarapovic.music.domain.repository.GenreRepository
+import dev.icarapovic.music.domain.repository.SongRepository
+import dev.icarapovic.music.extensions.getInt
 
 class GenreRepositoryImpl(
     private val contentResolver: ContentResolver,
-    private val songRepository: SongRepositoryImpl
+    private val songRepository: SongRepository
 ) : GenreRepository {
 
     override fun genres(): List<Genre> {
@@ -44,7 +32,10 @@ class GenreRepositoryImpl(
         // so we need to get songs without a genre a different way.
         return if (genreId == -1L) {
             getSongsWithNoGenre()
-        } else songRepository.songs(makeGenreSongCursor(genreId))
+        } else {
+            val cursor = makeGenreSongCursor(genreId)
+            return songs(cursor)
+        }
     }
 
     private fun getGenreFromCursor(cursor: Cursor): Genre {
@@ -64,19 +55,14 @@ class GenreRepositoryImpl(
     private fun getSongsWithNoGenre(): List<Song> {
         val selection =
             BaseColumns._ID + " NOT IN " + "(SELECT " + Genres.Members.AUDIO_ID + " FROM audio_genres_map)"
-        return songRepository.songs(songRepository.makeSongCursor(selection, null))
+        return songRepository.getFilteredSongs(selection)
     }
 
     private fun hasSongsWithNoGenre(): Boolean {
-        val allSongsCursor = songRepository.makeSongCursor(null, null)
-        val allSongsWithGenreCursor = makeAllSongsWithGenreCursor()
+        val allSongsCursor = songRepository.getAllSongs()
+        val allSongsWithGenreCursor = makeAllSongsWithGenreCursor() ?: return false
 
-        if (allSongsCursor == null || allSongsWithGenreCursor == null) {
-            return false
-        }
-
-        val hasSongsWithNoGenre = allSongsCursor.count > allSongsWithGenreCursor.count
-        allSongsCursor.close()
+        val hasSongsWithNoGenre = allSongsCursor.size > allSongsWithGenreCursor.count
         allSongsWithGenreCursor.close()
         return hasSongsWithNoGenre
     }
@@ -155,5 +141,51 @@ class GenreRepositoryImpl(
         } catch (e: SecurityException) {
             return null
         }
+    }
+
+    // TODO duplicate SongRepositoryImpl
+    private fun getSongFromCursorImpl(
+        cursor: Cursor
+    ): Song {
+        val id = cursor.getLong(MediaStore.Audio.AudioColumns._ID)
+        val title = cursor.getString(MediaStore.Audio.AudioColumns.TITLE)
+        val trackNumber = cursor.getInt(MediaStore.Audio.AudioColumns.TRACK)
+        val year = cursor.getInt(MediaStore.Audio.AudioColumns.YEAR)
+        val duration = cursor.getLong(MediaStore.Audio.AudioColumns.DURATION)
+        val data = cursor.getString(MediaStore.Audio.AudioColumns.DATA)
+        val dateModified = cursor.getLong(MediaStore.Audio.AudioColumns.DATE_MODIFIED)
+        val albumId = cursor.getLong(MediaStore.Audio.AudioColumns.ALBUM_ID)
+        val albumName = cursor.getStringOrNull(MediaStore.Audio.AudioColumns.ALBUM)
+        val artistId = cursor.getLong(MediaStore.Audio.AudioColumns.ARTIST_ID)
+        val artistName = cursor.getStringOrNull(MediaStore.Audio.AudioColumns.ARTIST)
+        val composer = cursor.getStringOrNull(MediaStore.Audio.AudioColumns.COMPOSER)
+        val albumArtist = cursor.getStringOrNull("album_artist")
+        return Song(
+            id,
+            title,
+            trackNumber,
+            year,
+            duration,
+            data,
+            dateModified,
+            albumId,
+            albumName ?: "",
+            artistId,
+            artistName ?: "",
+            composer ?: "",
+            albumArtist ?: ""
+        )
+    }
+
+    // TODO duplicate SongRepositoryImpl
+    private fun songs(cursor: Cursor?): List<Song> {
+        val songs = arrayListOf<Song>()
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                songs.add(getSongFromCursorImpl(cursor))
+            } while (cursor.moveToNext())
+        }
+        cursor?.close()
+        return songs
     }
 }

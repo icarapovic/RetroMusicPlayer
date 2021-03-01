@@ -25,6 +25,8 @@ import androidx.annotation.Nullable;
 import dev.icarapovic.music.App;
 import dev.icarapovic.music.data.repository.SongRepositoryImpl;
 import dev.icarapovic.music.domain.model.Song;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -155,7 +157,7 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
   @NonNull
   private List<Song> getQueue(@NonNull final String tableName) {
     Cursor cursor = getReadableDatabase().query(tableName, null, null, null, null, null, null);
-    return new SongRepositoryImpl(App.Companion.getContext()).songs(cursor);
+    return songs(cursor);
   }
 
   /**
@@ -205,5 +207,47 @@ public class MusicPlaybackQueueStore extends SQLiteOpenHelper {
         position += NUM_PROCESS;
       }
     }
+  }
+
+  private List<Song> songs(Cursor cursor) {
+    List<Song> songs = new ArrayList<>();
+    if (cursor != null && cursor.moveToFirst()) {
+      do {
+        songs.add(getSongFromCursorImpl(cursor));
+      } while (cursor.moveToNext());
+    }
+    cursor.close();
+    return songs;
+  }
+
+  private Song getSongFromCursorImpl(Cursor cursor) {
+    long id = cursor.getLong(0);
+    String title = cursor.getString(1);
+    int trackNumber = cursor.getInt(2);
+    int year = cursor.getInt(3);
+    long duration = cursor.getLong(4);
+    String data = cursor.getString(5);
+    long dateModified = cursor.getLong(6);
+    long albumId = cursor.getLong(7);
+    String albumName = cursor.getString(8);
+    long artistId = cursor.getLong(9);
+    String artistName = cursor.getString(10);
+    String composer = cursor.getString(11);
+    String albumArtist = cursor.getString(12);
+    return new Song(
+            id,
+            title,
+            trackNumber,
+            year,
+            duration,
+            data,
+            dateModified,
+            albumId,
+            albumName != null ? albumName : "",
+            artistId,
+            artistName != null ? artistName : "",
+            composer != null ? composer : "",
+            albumArtist != null ? albumArtist : ""
+    );
   }
 }

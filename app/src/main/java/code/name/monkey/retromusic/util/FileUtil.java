@@ -31,6 +31,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -59,7 +60,7 @@ public final class FileUtil {
     @NonNull
     public static List<Song> matchFilesWithMediaStore(
             @NonNull Context context, @Nullable List<File> files) {
-        return new SongRepositoryImpl(context).songs(makeSongCursor(context, files));
+        return songs(makeSongCursor(context, files));
     }
 
     public static String safeGetCanonicalPath(File file) {
@@ -258,5 +259,47 @@ public final class FileUtil {
             e.printStackTrace();
             return file.getAbsoluteFile();
         }
+    }
+
+    private static List<Song> songs(Cursor cursor) {
+        List<Song> songs = new ArrayList<>();
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                songs.add(getSongFromCursorImpl(cursor));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return songs;
+    }
+
+    private static Song getSongFromCursorImpl(Cursor cursor) {
+        long id = cursor.getLong(0);
+        String title = cursor.getString(1);
+        int trackNumber = cursor.getInt(2);
+        int year = cursor.getInt(3);
+        long duration = cursor.getLong(4);
+        String data = cursor.getString(5);
+        long dateModified = cursor.getLong(6);
+        long albumId = cursor.getLong(7);
+        String albumName = cursor.getString(8);
+        long artistId = cursor.getLong(9);
+        String artistName = cursor.getString(10);
+        String composer = cursor.getString(11);
+        String albumArtist = cursor.getString(12);
+        return new Song(
+                id,
+                title,
+                trackNumber,
+                year,
+                duration,
+                data,
+                dateModified,
+                albumId,
+                albumName != null ? albumName : "",
+                artistId,
+                artistName != null ? artistName : "",
+                composer != null ? composer : "",
+                albumArtist != null ? albumArtist : ""
+        );
     }
 }

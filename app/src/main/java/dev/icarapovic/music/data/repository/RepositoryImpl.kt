@@ -55,16 +55,16 @@ class RepositoryImpl(
 
     override suspend fun searchSongs(query: String): List<Song> = songRepository.songs(query)
 
-    override suspend fun searchAlbums(query: String): List<Album> = albumRepository.albums(query)
+    override suspend fun searchAlbums(query: String): List<Album> = albumRepository.getAlbumsByName(query)
 
     override suspend fun searchArtists(query: String): List<Artist> =
         artistRepository.artists(query)
 
-    override suspend fun fetchAlbums(): List<Album> = albumRepository.albums()
+    override suspend fun fetchAlbums(): List<Album> = albumRepository.getAllAlbums()
 
-    override suspend fun albumByIdAsync(albumId: Long): Album = albumRepository.album(albumId)
+    override suspend fun albumByIdAsync(albumId: Long): Album = albumRepository.getAlbumById(albumId)
 
-    override fun albumById(albumId: Long): Album = albumRepository.album(albumId)
+    override fun albumById(albumId: Long): Album = albumRepository.getAlbumById(albumId)
 
     override suspend fun fetchArtists(): List<Artist> = artistRepository.artists()
 
@@ -84,7 +84,7 @@ class RepositoryImpl(
 
     override suspend fun fetchGenres(): List<Genre> = genreRepository.genres()
 
-    override suspend fun allSongs(): List<Song> = songRepository.songs()
+    override suspend fun allSongs(): List<Song> = songRepository.getAllSongs()
 
     override suspend fun search(query: String?): MutableList<Any> =
         searchRepository.searchAll(context, query)
@@ -309,7 +309,7 @@ class RepositoryImpl(
 
     override fun songsFlow(): Flow<Result<List<Song>>> = flow {
         emit(Loading)
-        val data = songRepository.songs()
+        val data = songRepository.getAllSongs()
         if (data.isEmpty()) {
             emit(Error(Exception(Throwable("No items"))))
         } else {
@@ -319,7 +319,7 @@ class RepositoryImpl(
 
     override fun albumsFlow(): Flow<Result<List<Album>>> = flow {
         emit(Loading)
-        val data = albumRepository.albums()
+        val data = albumRepository.getAllAlbums()
         if (data.isEmpty()) {
             emit(Error(Exception(Throwable("No items"))))
         } else {
