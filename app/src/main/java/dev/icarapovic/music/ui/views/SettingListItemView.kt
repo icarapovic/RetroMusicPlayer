@@ -34,11 +34,11 @@ class SettingListItemView @JvmOverloads constructor(
         View.inflate(context, R.layout.list_setting_item_view, this)
         val typedArray =
             context.obtainStyledAttributes(attrs, R.styleable.SettingListItemView)
-        icon as ColorIconsImageView
+        icon as ColorIconsView
         if (typedArray.hasValue(R.styleable.SettingListItemView_settingListItemIcon)) {
             icon.setImageDrawable(typedArray.getDrawable(R.styleable.SettingListItemView_settingListItemIcon))
         }
-        icon.setIconBackgroundColor(
+        icon.setup(
             typedArray.getColor(
                 R.styleable.SettingListItemView_settingListItemIconColor,
                 Color.WHITE

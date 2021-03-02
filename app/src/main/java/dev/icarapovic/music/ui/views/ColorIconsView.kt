@@ -20,42 +20,35 @@ import android.graphics.Color
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
-import code.name.monkey.appthemehelper.util.ATHUtil
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.retromusic.R
-import code.name.monkey.retromusic.util.PreferenceUtil
-import code.name.monkey.retromusic.util.RetroColorUtil
+import dev.icarapovic.music.extensions.isDarkThemeOn
 
-
-class ColorIconsImageView @JvmOverloads constructor(
+class ColorIconsView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = -1
 ) : AppCompatImageView(context, attrs, defStyleAttr) {
 
-
     init {
-        // Load the styled attributes and set their properties
-        val attributes =
-            context.obtainStyledAttributes(attrs, R.styleable.ColorIconsImageView, 0, 0)
-        val color =
-            attributes.getColor(R.styleable.ColorIconsImageView_iconBackgroundColor, Color.RED)
-        setIconBackgroundColor(color)
+        val attributes = context.obtainStyledAttributes(attrs, R.styleable.ColorIconsView, 0, 0)
+        val bgColor = attributes.getColor(R.styleable.ColorIconsView_civ_backgroundColor, Color.RED)
+
+        setup(bgColor)
         attributes.recycle()
     }
 
-    fun setIconBackgroundColor(color: Int) {
+    fun setup(bgColor: Int) {
         background = ContextCompat.getDrawable(context, R.drawable.color_circle_gradient)
-        if (ATHUtil.isWindowBackgroundDark(context) && PreferenceUtil.isDesaturatedColor) {
-            val desaturatedColor = RetroColorUtil.desaturateColor(color, 0.4f)
-            backgroundTintList = ColorStateList.valueOf(desaturatedColor)
-            imageTintList =
-                ColorStateList.valueOf(ATHUtil.resolveColor(context, R.attr.colorSurface))
+
+        if (context.isDarkThemeOn()) {
+            // dark theme // desaturated background color + dark grey/window background colored icon
+            backgroundTintList = ColorStateList.valueOf(ColorUtil.desaturate(bgColor))
+            imageTintList = ColorStateList.valueOf(context.getColor(R.color.md_grey_900))
         } else {
-            backgroundTintList = ColorStateList.valueOf(ColorUtil.adjustAlpha(color, 0.22f))
-            imageTintList = ColorStateList.valueOf(ColorUtil.withAlpha(color, 0.75f))
+            // light theme // semi-transparent background + colored icon
+            backgroundTintList = ColorStateList.valueOf(ColorUtil.adjustAlpha(bgColor))
+            imageTintList = ColorStateList.valueOf(bgColor)
         }
-        requestLayout()
-        invalidate()
     }
 }

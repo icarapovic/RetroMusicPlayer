@@ -5,12 +5,10 @@ import androidx.annotation.ColorInt
 import androidx.annotation.FloatRange
 
 object ColorUtil {
-    fun desaturateColor(color: Int, ratio: Float): Int {
+    fun desaturate(color: Int): Int {
         val hsv = FloatArray(3)
         Color.colorToHSV(color, hsv)
-
-        hsv[1] = hsv[1] / 1 * ratio + 0.2f * (1.0f - ratio)
-
+        hsv[1] = hsv[1] * 0.25f
         return Color.HSVToColor(hsv)
     }
 
@@ -58,7 +56,7 @@ object ColorUtil {
     }
 
     @ColorInt
-    fun adjustAlpha(@ColorInt color: Int, @FloatRange(from = 0.0, to = 1.0) factor: Float): Int {
+    fun adjustAlpha(@ColorInt color: Int, @FloatRange(from = 0.0, to = 1.0) factor: Float = 0.2f): Int {
         val alpha = Math.round(Color.alpha(color) * factor)
         val red = Color.red(color)
         val green = Color.green(color)

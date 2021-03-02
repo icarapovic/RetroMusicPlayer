@@ -17,13 +17,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <dev.icarapovic.music.ui.views.ColorIconsImageView
+        <dev.icarapovic.music.ui.views.ColorIconsView
             android:id="@+id/v1"
             android:layout_width="@dimen/adaptive_icon_size"
             android:layout_height="@dimen/adaptive_icon_size"
             android:layout_gravity="center"
             android:padding="@dimen/adaptive_icon_padding"
-            app:iconBackgroundColor="@color/md_blue_500"
+            app:civ_backgroundColor="@color/md_blue_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -52,13 +52,13 @@
         app:layout_constraintStart_toEndOf="@+id/history"
         app:layout_constraintTop_toTopOf="@+id/history">
 
-        <dev.icarapovic.music.ui.views.ColorIconsImageView
+        <dev.icarapovic.music.ui.views.ColorIconsView
             android:id="@+id/v2"
             android:layout_width="@dimen/adaptive_icon_size"
             android:layout_height="@dimen/adaptive_icon_size"
             android:layout_gravity="center"
             android:padding="@dimen/adaptive_icon_padding"
-            app:iconBackgroundColor="@color/md_red_500"
+            app:civ_backgroundColor="@color/md_red_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -88,13 +88,13 @@
         app:layout_constraintStart_toEndOf="@+id/lastAdded"
         app:layout_constraintTop_toTopOf="@+id/lastAdded">
 
-        <dev.icarapovic.music.ui.views.ColorIconsImageView
+        <dev.icarapovic.music.ui.views.ColorIconsView
             android:id="@+id/v3"
             android:layout_width="@dimen/adaptive_icon_size"
             android:layout_height="@dimen/adaptive_icon_size"
             android:layout_gravity="center"
             android:padding="@dimen/adaptive_icon_padding"
-            app:iconBackgroundColor="@color/md_deep_purple_500"
+            app:civ_backgroundColor="@color/md_deep_purple_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -124,13 +124,13 @@
         app:layout_constraintStart_toEndOf="@+id/topPlayed"
         app:layout_constraintTop_toTopOf="@+id/topPlayed">
 
-        <dev.icarapovic.music.ui.views.ColorIconsImageView
+        <dev.icarapovic.music.ui.views.ColorIconsView
             android:id="@+id/v4"
             android:layout_width="@dimen/adaptive_icon_size"
             android:layout_height="@dimen/adaptive_icon_size"
             android:layout_gravity="center"
             android:padding="@dimen/adaptive_icon_padding"
-            app:iconBackgroundColor="@color/md_green_500"
+            app:civ_backgroundColor="@color/md_green_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

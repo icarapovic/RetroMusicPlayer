@@ -214,10 +214,7 @@ private constructor(private val mContext: Context) : ThemeStorePrefKeys, ThemeSt
                 ThemeStorePrefKeys.KEY_ACCENT_COLOR,
                 ATHUtil.resolveColor(context, R.attr.colorAccent, Color.parseColor("#263238"))
             )
-            return if (ATHUtil.isWindowBackgroundDark(context) && desaturatedColor) ColorUtil.desaturateColor(
-                color,
-                0.4f
-            ) else color
+            return if (ATHUtil.isWindowBackgroundDark(context)) ColorUtil.desaturate(color) else color
         }
 
         @CheckResult

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- new colors -->
-
-    <color name="app_background_color">@color/md_white_1000</color>
+    <color name="app_background_color">@color/md_grey_900</color>
 
     <color name="window_color">@color/md_white_1000</color>
     <color name="window_color_light">@color/md_white_1000</color>
