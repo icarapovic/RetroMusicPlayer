@@ -16,11 +16,6 @@
             android:title="@string/pref_title_general_theme"
             app:icon="@drawable/ic_color_lens" />
 
-        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:key="black_theme"
-            android:layout="@layout/list_item_view_switch_no_title"
-            android:title="@string/black_theme_name" />
-
     </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
@@ -35,13 +30,6 @@
             android:summary="@string/accent_color_desc"
             android:title="@string/accent_color"
             app:icon="@drawable/ic_colorize" />
-
-        <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:defaultValue="false"
-            android:key="desaturated_color"
-            android:layout="@layout/list_item_view_switch"
-            android:summary="@string/pref_summary_desaturated_color"
-            android:title="@string/pref_title_desaturated_color" />
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="false"

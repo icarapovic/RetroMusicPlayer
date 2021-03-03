@@ -14,7 +14,6 @@
  */
 package dev.icarapovic.music.ui.fragments.settings
 
-import android.os.Build
 import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.TwoStatePreference
@@ -28,10 +27,6 @@ import dev.icarapovic.music.ui.appshortcuts.DynamicShortcutManager
 import code.name.monkey.retromusic.util.PreferenceUtil
 import com.afollestad.materialdialogs.color.ColorChooserDialog
 
-/**
- * @author Hemanth S (h4h13).
- */
-
 class ThemeSettingsFragment : AbsSettingsFragment() {
     override fun invalidateSettings() {
         val generalTheme: Preference? = findPreference(GENERAL_THEME)
@@ -42,10 +37,8 @@ class ThemeSettingsFragment : AbsSettingsFragment() {
                 setSummary(it, newValue)
                 ThemeStore.markChanged(requireContext())
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-                    requireActivity().setTheme(PreferenceUtil.themeResFromPrefValue(theme))
-                    DynamicShortcutManager(requireContext()).updateDynamicShortcuts()
-                }
+                requireActivity().setTheme(PreferenceUtil.themeResFromPrefValue(theme))
+                DynamicShortcutManager(requireContext()).updateDynamicShortcuts()
                 requireActivity().recreate()
                 true
             }
@@ -62,28 +55,6 @@ class ThemeSettingsFragment : AbsSettingsFragment() {
                 .preselect(accentColor)
                 .show(requireActivity())
             return@setOnPreferenceClickListener true
-        }
-        val blackTheme: ATESwitchPreference? = findPreference(BLACK_THEME)
-        blackTheme?.setOnPreferenceChangeListener { _, _ ->
-            ThemeStore.markChanged(requireContext())
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-                requireActivity().setTheme(PreferenceUtil.themeResFromPrefValue("black"))
-                DynamicShortcutManager(requireContext()).updateDynamicShortcuts()
-            }
-            requireActivity().recreate()
-            true
-        }
-
-        val desaturatedColor: ATESwitchPreference? = findPreference(DESATURATED_COLOR)
-        desaturatedColor?.setOnPreferenceChangeListener { _, value ->
-            val desaturated = value as Boolean
-            ThemeStore.prefs(requireContext())
-                .edit()
-                .putBoolean("desaturated_color", desaturated)
-                .apply()
-            PreferenceUtil.isDesaturatedColor = desaturated
-            requireActivity().recreate()
-            true
         }
 
         val colorAppShortcuts: TwoStatePreference? = findPreference(SHOULD_COLOR_APP_SHORTCUTS)

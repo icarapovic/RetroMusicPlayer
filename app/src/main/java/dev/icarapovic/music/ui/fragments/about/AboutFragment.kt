@@ -63,7 +63,6 @@ class AboutFragment : Fragment(R.layout.fragment_about), View.OnClickListener {
         changelog.setOnClickListener(this)
         openSource.setOnClickListener(this)
         pinterestLink.setOnClickListener(this)
-        bugReportLink.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -79,7 +78,6 @@ class AboutFragment : Fragment(R.layout.fragment_about), View.OnClickListener {
             R.id.twitterLink -> openUrl(Constants.APP_TWITTER_LINK)
             R.id.changelog -> openUrl(Constants.TELEGRAM_CHANGE_LOG)
             R.id.openSource -> NavigationUtil.goToOpenSource(requireActivity())
-            R.id.bugReportLink -> NavigationUtil.bugReport(requireActivity())
         }
     }
 

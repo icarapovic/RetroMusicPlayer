@@ -24,6 +24,11 @@ import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.retromusic.R
 import dev.icarapovic.music.extensions.isDarkThemeOn
 
+/**
+ * Draws a colored circle with an icon inside.
+ * In the dark theme the circle color is desaturated and the icon is colored in a dark gray.
+ * In light theme the circle is semi-transparent with the icon being in vibrant color.
+ * */
 class ColorIconsView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -39,7 +44,7 @@ class ColorIconsView @JvmOverloads constructor(
     }
 
     fun setup(bgColor: Int) {
-        background = ContextCompat.getDrawable(context, R.drawable.color_circle_gradient)
+        background = ContextCompat.getDrawable(context, R.drawable.circle)
 
         if (context.isDarkThemeOn()) {
             // dark theme // desaturated background color + dark grey/window background colored icon

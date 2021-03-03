@@ -28,15 +28,10 @@ import dev.icarapovic.music.ui.LicenseActivity;
 import dev.icarapovic.music.ui.LyricsActivity;
 import dev.icarapovic.music.ui.PlayingQueueActivity;
 import dev.icarapovic.music.ui.UserInfoActivity;
-import code.name.monkey.retromusic.activities.bugreport.BugReportActivity;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import org.jetbrains.annotations.NotNull;
 
 public class NavigationUtil {
-
-  public static void bugReport(@NonNull Activity activity) {
-    ActivityCompat.startActivity(activity, new Intent(activity, BugReportActivity.class), null);
-  }
 
   public static void goToLyrics(@NonNull Activity activity) {
     Intent intent = new Intent(activity, LyricsActivity.class);
